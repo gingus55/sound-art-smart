@@ -3,14 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Jambot mock ups</title>
+    <title>Get Art Smart</title>
   </head>
+
+  <div class="container-fluid">
+    <div class="load-html" id="home" data-source="home.html"></div>
+    <div class="load-html" id="get-started" data-source="get-started.html"></div>
+    <div class="load-html" id="my-files" data-source="my-files.html"></div>
+    <div class="load-html" id="about-us" data-source="about-us.html"></div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function () {
+    $(".load-html").each(function () {
+        $(this).load(this.dataset.source);
+    });
+});
+</script>
 
   <!-- header section with nav bar containing links -->
   <body>
     <!-- nav - header tag-->
     <header class="header">
-      <h1>Jambot Mock Ups pages 1-7</h1>
+      <h1>Get Art Smart Jambot Mock Ups pg 1-7</h1>
 
       <!-- navigation bar with the website links -->
       <nav>
@@ -30,6 +45,7 @@
         </ul>
       </nav>
 
+    
 
 
 
@@ -94,7 +110,7 @@
       </div>
      </div>
       <div class="footer">
-      <h2>Made with mad skills</h2>
+      <h2>Made with mad skills 😃</h2>
       <p>&copy; 2021 Bootcamp</p>
     </div>
   </body>
