@@ -1,0 +1,69 @@
+:root {
+  --aqua: #a9c7c3;
+  --turquoise: #4d6663;
+  --coral: #e07069;
+  --ivory: #f1efe8;
+  --green: #4daa59;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+
+  background-image: linear-gradient(to bottom, var(--ivory), #f1efe88c),
+    url("https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-color: var(--ivory);
+}
+
+#nav-bar-bg {
+  background-color: var(--aqua);
+  background-color: var(--turquoise);
+  background-image: linear-gradient(
+    319deg,
+    var(--aqua) 0%,
+    var(--ivory) 37%,
+    var(--turquoise) 100%
+  );
+}
+
+#navbar-logo,
+#burger {
+  max-height: 100px;
+}
+
+/* cards styling */
+
+.paint-card {
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid #a3a3a3;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px #d4d4d4;
+  background-color: rgba(255, 255, 240, 0.5);
+}
+.card-img img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+}
+
+.paint-card:hover {
+  transform: scale(1.1);
+  border: 2px solid gold;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+}
