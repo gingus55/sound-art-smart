@@ -44,6 +44,7 @@ body {
 
 .paint-card {
   width: 18rem;
+  height: 18rem;
   border: 1px solid #a3a3a3;
   padding: 16px;
   border-radius: 4px;
