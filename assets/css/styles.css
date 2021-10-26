@@ -55,3 +55,8 @@ body {
   max-height: 180px;
   object-fit: contain;
 }
+
+.paint-card:hover {
+  transform: scale(1.1);
+  border: 2px solid gold;
+}
