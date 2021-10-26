@@ -39,3 +39,19 @@ body {
 #burger {
   max-height: 100px;
 }
+
+/* cards styling */
+
+.paint-card {
+  width: 18rem;
+  border: 1px solid #a3a3a3;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px #d4d4d4;
+  background-color: rgba(255, 255, 240, 0.5);
+}
+.card-img img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+}
