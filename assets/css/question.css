@@ -61,3 +61,9 @@ body {
   transform: scale(1.1);
   border: 2px solid gold;
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+}
