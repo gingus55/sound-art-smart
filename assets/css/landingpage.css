@@ -8,12 +8,12 @@
 
 * {
   box-sizing: border-box;
-  background-color: transparent;
+  /* border: 1px solid #000000; */
 }
 
 body {
   margin: 0;
-
+  /* background image properties */
   background-image: linear-gradient(to bottom, var(--ivory), #f1efe88c),
     url("https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80");
   height: 100vh;
@@ -40,30 +40,30 @@ body {
   max-height: 100px;
 }
 
-/* cards styling */
+main {
+  display: flex;
+}
 
-/* .paint-card {
-    width: 18rem;
-    height: 18rem;
-    border: 1px solid #a3a3a3;
-    padding: 16px;
-    border-radius: 4px;
-    box-shadow: 3px 3px 3px #d4d4d4;
-    background-color: rgba(255, 255, 240, 0.5);
-  }
-  .card-img img {
-    width: 100%;
-    max-height: 180px;
-    object-fit: contain;
-  }
-  
-  .paint-card:hover {
-    transform: scale(1.1);
-    border: 2px solid gold;
-  } */
+#introduction {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: var(--ivory);
+  padding: 20px;
+  border-radius: 4px;
+}
 
-@media only screen and (max-width: 768px) {
-  body {
-    height: auto;
-  }
+.title {
+  padding-bottom: 10px;
+}
+
+#landing-quote {
+  font-family: "Bad Script", sans-serif;
+  font-weight: 700;
+}
+
+.landing-description {
+  padding-top: 10px;
+  font-size: 1.2rem;
 }
