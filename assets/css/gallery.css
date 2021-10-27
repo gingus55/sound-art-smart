@@ -1,0 +1,206 @@
+:root {
+  --aqua: #a9c7c3;
+  --turquoise: #4d6663;
+  --coral: #e07069;
+  --ivory: #f1efe8;
+  --green: #4daa59;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.header {
+  background-color: #0d6efd;
+}
+
+.nav-container {
+  padding: 20px 10px;
+  list-style: none;
+
+  /* flex properties */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  padding-left: 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: red;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.nav-item a:hover {
+  color: whitesmoke;
+}
+
+.banner {
+  text-align: center;
+  padding: 75px 75px;
+  font-size: 36px;
+}
+
+h1 {
+  text-align: center;
+  padding: 75px 75px;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.content {
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 20px;
+  border-radius: 4px;
+  margin: 0px 10px;
+  text-decoration: none;
+  color: #000;
+  min-width: 200px;
+  margin-bottom: 16px;
+  font-size: x-large;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0d6dfdb0;
+  font-weight: 700;
+}
+
+.btn-primary:active {
+  background-color: #0d6efd;
+}
+
+.btn-secondary {
+  background-color: #1db149;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #1db1499f;
+  font-weight: 700;
+}
+
+.btn-secondary:active {
+  background-color: #1db149;
+}
+
+.container {
+  margin: 0px 100px;
+}
+
+.paint-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.paint-card {
+  width: 18rem;
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-bottom: 32px;
+  border: 1px solid #a3a3a3;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px #d4d4d4;
+}
+
+.paint-card:hover {
+  transform: translateY(-4px);
+}
+
+.sculpture-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sculpture-card {
+  width: 18rem;
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-bottom: 32px;
+  border: 1px solid #a3a3a3;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px #d4d4d4;
+}
+
+.sculpture-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-img img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+}
+
+.card-body {
+  line-height: 24px;
+  text-align: justify;
+  margin: 16px 0px;
+}
+
+.card-footer {
+  margin: 16px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paint-info {
+  align-items: flex-end;
+}
+
+.sculpture-info {
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 576px) {
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-item {
+    padding: 10px;
+  }
+
+  .links-container {
+    flex-direction: row;
+  }
+
+  .container {
+    margin: 0px 16px;
+  }
+
+  .banner {
+    padding: 150px 16px;
+  }
+}
