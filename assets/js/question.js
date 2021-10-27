@@ -16,9 +16,18 @@ const paintingsArr = [
   {
     question: "Which do you prefer?",
     cards: [
-      { name: "People", img:""},
-      { name: "Places", img: "assets\images\saslogo.png" },
-      { name: "Animals", img: "assets\images\saslogo.png" },
+      {
+        name: "People",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+      {
+        name: "Places",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+      {
+        name: "Animals",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
     ],
   },
   {
@@ -64,7 +73,7 @@ const storeKeyword = function () {
 };
 
 // build title
-const buildTitle = function(obj){
+const buildTitle = function (obj) {
   return `<div
   class="
     is-size-1
@@ -76,27 +85,25 @@ const buildTitle = function(obj){
   "
 >
   ${obj.question}
-</div>`
-}
+</div>`;
+};
 // build cards
-const buildCards = function(array){
-  // const cardCont = `<div class="is-flex is-flex-wrap-wrap is-justify-content-space-around"></div>`;
-  array.cards.forEach(element => {
+const buildCards = function (array) {
+  const cardCont = `<div class="is-flex is-flex-wrap-wrap is-justify-content-space-around"></div>`;
+  array.cards.forEach((element) => {
     answerCard = `<div class="paint-card animate__animated animate__zoomIn m-5" id="${element.name}">
           <div class="card-img" id="${element.name}">
             <img
               src="${element.img}”
-       alt=“landscape-painting"
+       alt=“"
               alt="" id="${element.name}g"
             />
           </div>
           <div class="card-header-title is-centered is-size-5" id="${element.name}">${element.name}</div>
         </div>`;
-        container.append(answerCard);
+    container.append(answerCard);
   });
-  
- 
-}
+};
 
 // RENDER QUESTIONS
 const renderQuestions = function(array){
