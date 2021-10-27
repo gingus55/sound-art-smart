@@ -16,9 +16,9 @@ const paintingsArr = [
   {
     question: "Which do you prefer?",
     cards: [
-      { name: "People", img: "./assets/images/saslogo.png" },
-      { name: "Places", img: "./assets/images/saslogo.png" },
-      { name: "Animals", img: "./assets/images/saslogo.png" },
+      { name: "People", img:""},
+      { name: "Places", img: "assets\images\saslogo.png" },
+      { name: "Animals", img: "assets\images\saslogo.png" },
     ],
   },
   {
@@ -63,14 +63,77 @@ const storeKeyword = function () {
   console.log("storing keyword");
 };
 
+// build title
+const buildTitle = function(obj){
+  return `<div
+  class="
+    is-size-1
+    title
+    has-text-centered
+    mt-5
+    mb-5
+    animate__animated animate__backInDown
+  "
+>
+  ${obj.question}
+</div>`
+}
+// build cards
+const buildCards = function(array){
+  // const cardCont = `<div class="is-flex is-flex-wrap-wrap is-justify-content-space-around"></div>`;
+  array.cards.forEach(element => {
+    answerCard = `<div class="paint-card animate__animated animate__zoomIn m-5" id="${element.name}">
+          <div class="card-img" id="${element.name}">
+            <img
+              src="${element.img}”
+       alt=“landscape-painting"
+              alt="" id="${element.name}g"
+            />
+          </div>
+          <div class="card-header-title is-centered is-size-5" id="${element.name}">${element.name}</div>
+        </div>`;
+        container.append(answerCard);
+  });
+  
+ 
+}
+
+// RENDER QUESTIONS
+const renderQuestions = function(array){
+  // render title
+const title = buildTitle(array);
+  // build cards
+buildCards(array);
+// empty container
+container.empty();
+  // append cards
+container.append(title )
+
+  console.log("questions rendered")
+}
+
+
 // handleClick needs to store keyword and render next question
 const handleClick = function (event) {
   const target = event.target;
-  console.log(target);
-  // STORE KEYWORD
+  var number = 0;
+  if (target.id === "painting") {
   storeKeyword();
+
+// RENDER PAINTING QUESTIONS
+  renderQuestions(paintingsArr[number]);
+
+  } else if(target.id ==="sculpture"){
+  storeKeyword();
+
+
+
+  } else {
+
+  };
+ 
   // RENDER NEXT QUESTION
-};
+};;
 
 // DOCUMENT ONLOAD
 const onReady = function () {
