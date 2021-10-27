@@ -64,6 +64,7 @@ const paintingsArr = [
 // CODE FOR QUESTION LOGIC
 // PAGE TARGETS
 const container = $("#question-container");
+const cardPlacer = $("#placer");
 
 // EMPTY ARRAY FOR KEYWORD STORAGE
 const keyWords = [];
@@ -74,7 +75,10 @@ const storeKeyword = function () {
 
 // build title
 const buildTitle = function (obj) {
-  return `<div
+  return ` 
+  <div class="is-flex is-flex-wrap-wrap is-justify-content-space-around" id="placer">
+
+  <div
   class="
     is-size-1
     title
@@ -85,11 +89,10 @@ const buildTitle = function (obj) {
   "
 >
   ${obj.question}
-</div>`;
+</div></div>`;
 };
 // build cards
 const buildCards = function (array) {
-  const cardCont = `<div class="is-flex is-flex-wrap-wrap is-justify-content-space-around"></div>`;
   array.cards.forEach((element) => {
     answerCard = `<div class="paint-card animate__animated animate__zoomIn m-5" id="${element.name}">
           <div class="card-img" id="${element.name}">
@@ -101,20 +104,23 @@ const buildCards = function (array) {
           </div>
           <div class="card-header-title is-centered is-size-5" id="${element.name}">${element.name}</div>
         </div>`;
-    container.append(answerCard);
+    cardPlacer.append(answerCard);
   });
+  return cardPlacer;
 };
 
 // RENDER QUESTIONS
+
 const renderQuestions = function(array){
+  container.empty();
+
   // render title
 const title = buildTitle(array);
   // build cards
-buildCards(array);
+const cards = buildCards(array);
 // empty container
-container.empty();
   // append cards
-container.append(title )
+container.append(title, cards);
 
   console.log("questions rendered")
 }
@@ -126,8 +132,9 @@ const handleClick = function (event) {
   var number = 0;
   if (target.id === "painting") {
   storeKeyword();
-
+  
 // RENDER PAINTING QUESTIONS
+
   renderQuestions(paintingsArr[number]);
 
   } else if(target.id ==="sculpture"){
