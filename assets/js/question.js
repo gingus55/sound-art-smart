@@ -33,9 +33,9 @@ const paintingsArr = [
   {
     question: "Which medium do you like the look of?",
     cards: [
-      { name: "Oil", img: "./assets/images/saslogo.png" },
-      { name: "Watercolour", img: "./assets/images/saslogo.png" },
-      { name: "Tempera", img: "./assets/images/saslogo.png" },
+      { name: "Oil", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
+      { name: "Watercolour", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
+      { name: "Tempera", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
     ],
   },
   {
@@ -43,21 +43,72 @@ const paintingsArr = [
     cards: [
       {
         name: "Egyptian Art",
-        img: "./assets/images/saslogo.png",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         deptId: "10",
       },
       {
         name: "Greek and Roman Art",
-        img: "./assets/images/saslogo.png",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         deptId: "13",
       },
-      { name: "Islamic Art", img: "./assets/images/saslogo.png", deptId: "14" },
+      { name: "Islamic Art", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", deptId: "14" },
       {
         name: "Medieval Art",
-        img: "./assets/images/saslogo.png",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         deptId: "17",
       },
-      { name: "Modern Art", img: "./assets/images/saslogo.png", deptId: "21" },
+      { name: "Modern Art", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", deptId: "21" },
+    ],
+  },
+];
+
+const sculpturesArr = [
+  {
+    question: "Which do you prefer?",
+    cards: [
+      {
+        name: "People",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+      {
+        name: "Places",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+      {
+        name: "Animals",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+    ],
+  },
+  {
+    question: "Which medium do you like the look of?",
+    cards: [
+      { name: "Clay", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
+      { name: "Marble", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
+      { name: "Metal", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
+      { name: "Gold", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" }
+    ],
+  },
+  {
+    question: "Which style do you fancy?",
+    cards: [
+      {
+        name: "Egyptian Art",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        deptId: "10",
+      },
+      {
+        name: "Greek and Roman Art",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        deptId: "13",
+      },
+      { name: "Islamic Art", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", deptId: "14" },
+      {
+        name: "Medieval Art",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        deptId: "17",
+      },
+      { name: "Modern Art", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", deptId: "21" },
     ],
   },
 ];
@@ -69,8 +120,9 @@ const cardPlacer = $("#placer");
 // EMPTY ARRAY FOR KEYWORD STORAGE
 const keyWords = [];
 
-const storeKeyword = function () {
-  console.log("storing keyword");
+const storeKeyword = function (word) {
+  keyWords.push(word);
+  console.log(keyWords);
 };
 
 // build title
@@ -99,7 +151,7 @@ const buildCards = function (array) {
             <img
               src="${element.img}”
        alt=“"
-              alt="" id="${element.name}g"
+              alt="" id="${element.name}"
             />
           </div>
           <div class="card-header-title is-centered is-size-5" id="${element.name}">${element.name}</div>
@@ -113,38 +165,45 @@ const buildCards = function (array) {
 
 const renderQuestions = function(array){
 container.empty();
-
+cardPlacer.empty();
   // render title
 const title = buildTitle(array);
   // build cards
 const cards = buildCards(array);
-// empty container
   // append cards
 container.append(title, cards);
-
-  console.log("questions rendered")
 }
 
+var number = 0;
+
+const questionKeyClick = function(event){
+  const target = event.target.id;
+  storeKeyword(target);
+  renderQuestions(paintingsArr[number]);
+  number+=1;
+}
+
+const questionKeyClickTwo = function(event){
+  const target = event.target.id;
+  storeKeyword(target);
+  renderQuestions(sculpturesArr[number]);
+  number+=1;
+}
 
 // handleClick needs to store keyword and render next question
 const handleClick = function (event) {
 
   const target = event.target;
-  var number = 0;
   if (target.id === "painting") {
-  storeKeyword();
-  
-// RENDER PAINTING QUESTIONS
-
+  storeKeyword(target.id);
   renderQuestions(paintingsArr[number]);
-
+  number+=1
+  container.on("click", questionKeyClick);
   } else if(target.id ==="sculpture"){
-  storeKeyword();
-
-
-
-  } else {
-
+  storeKeyword(target.id);
+  renderQuestions(sculpturesArr[number]);
+  number+=1;
+  container.on("click", questionKeyClickTwo);
   };
  
   // RENDER NEXT QUESTION
