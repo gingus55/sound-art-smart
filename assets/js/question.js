@@ -112,7 +112,7 @@ const buildCards = function (array) {
 // RENDER QUESTIONS
 
 const renderQuestions = function(array){
-  container.empty();
+container.empty();
 
   // render title
 const title = buildTitle(array);
@@ -128,6 +128,7 @@ container.append(title, cards);
 
 // handleClick needs to store keyword and render next question
 const handleClick = function (event) {
+
   const target = event.target;
   var number = 0;
   if (target.id === "painting") {
