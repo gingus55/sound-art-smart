@@ -65,5 +65,23 @@ main {
 
 .landing-description {
   padding-top: 10px;
+  padding-bottom: 20px;
   font-size: 1.2rem;
+}
+
+#start-btn {
+  margin: auto;
+  background-color: var(--coral);
+  color: white;
+  font-weight: 700;
+}
+
+#start-btn:hover {
+  background-color: #e2554b;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
 }
