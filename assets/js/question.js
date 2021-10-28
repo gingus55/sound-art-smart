@@ -205,22 +205,23 @@ container.append(title, cards);
 
 var number = 0;
 
-const questionKeyClick = function(event){
-  if(number<3){
-  const target = event.target.id;
-  storeKeyword(target);
-  renderQuestions(paintingsArr[number]);
-  number+=1;
-  console.log(number);
-} else if (number===3){
-  const target = event.target.id;
-  storeKeyword(target);
-  container.empty();
-  const tempMessage = `<p>Getting your results...</p>`;
-  container.append(tempMessage);
-  convertKeywords(keyWords);
-}
-}
+const questionKeyClick = function (event) {
+  if (number < 3) {
+    const target = event.target.id;
+    storeKeyword(target);
+    renderQuestions(paintingsArr[number]);
+    number += 1;
+    console.log(number);
+  } else if (number === 3) {
+    const target = event.target.id;
+    storeKeyword(target);
+    container.empty();
+    const tempMessage = `<p>Getting your results...</p>`;
+    container.append(tempMessage);
+    convertKeywords(keyWords);
+    makeApiCall(keyWords);
+  }
+};
 
 const questionKeyClickTwo = function (event) {
   if (number < 3) {
@@ -236,7 +237,7 @@ const questionKeyClickTwo = function (event) {
     const tempMessage = `<p>Getting your results...</p>`;
     container.append(tempMessage);
     convertKeywords(keyWords);
-    makeApiCall();
+    makeApiCall(keyWords);
   }
 };
 
@@ -268,11 +269,17 @@ const handleData = function (response) {
 };
 
 const makeApiCall = function (keyWords) {
+  console.log(keyWords);
   // construct url
-  const myUrl = `https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=${keyWords[3]}&q=${keyWords[0]}, ${keyWords[1]}, ${keyWords[2]}`;
+  const dept = keyWords[3];
+  // console.log(dept);
+  const searchWordOne = keyWords[0];
+  const searchWordTwo = keyWords[1];
+  const searchWordThree = keyWords[2];
+  const myUrl = `https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=${dept}&q=${searchWordOne}, ${searchWordTwo}, ${searchWordThree}`;
   // make call
   console.log(myUrl);
-  // fetch(myUrl).then(handleResponse).then(handleData);
+  fetch(myUrl).then(handleResponse).then(handleData);
 };
 
 // DOCUMENT ONLOAD
