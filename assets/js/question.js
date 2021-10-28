@@ -266,7 +266,21 @@ const handleResponse = function (response) {
 
 const handleData = function (response) {
   console.log(response);
-};
+  const objArray = response.objectIDs;
+  // generate array of 6 objects
+
+  // Shuffle array
+
+  const shuffled = objArray.sort(() => 0.5 - Math.random());
+
+  // Get sub-array of first n elements after shuffled
+
+  let selected = shuffled.slice(0, 6);
+  // fetch data for each of the 6 objects from mock data headings
+  console.log(selected);
+
+  // perhaps generate keywords for a quotation API call
+};;
 
 const makeApiCall = function (keyWords) {
   console.log(keyWords);
