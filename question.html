@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
     <link rel="stylesheet" href="./assets/css/question.css" />
   </head>
@@ -22,7 +23,7 @@
         <div class="navbar-brand">
           <a href="" class="navbar-item py-2 px-2">
             <img
-              src="https://www.washingtoncenter.org/wp-content/uploads/2018/07/Arts-Guild-Logo-1-Black-Copy.jpg"
+              src="./assets/images/saslogo.png"
               alt="logo"
               id="navbar-logo"
             />
@@ -47,7 +48,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="question-container">
       <!-- page title -->
       <div
         class="
@@ -61,29 +62,44 @@
       >
         Choose Your Favorite
       </div>
-      <div class="is-flex is-flex-wrap-wrap is-justify-content-space-around">
+      <div
+        class="is-flex is-flex-wrap-wrap is-justify-content-space-around"
+        id="placer"
+      >
         <!-- pAINTING CARD -->
-        <div class="paint-card animate__animated animate__zoomIn m-5">
-          <div class="card-img">
+        <div
+          class="paint-card animate__animated animate__zoomIn m-5"
+          id="painting"
+        >
+          <div class="card-img" id="painting">
             <img
               src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_412,c_fill,g_auto,h_412,ar_1:1/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190430171751-mona-lisa.jpg”
        alt=“landscape-painting"
               alt=""
+              id="painting"
             />
           </div>
-          <div class="card-header-title is-centered is-size-5">Paintings</div>
+          <div class="card-header-title is-centered is-size-5" id="painting">
+            Paintings
+          </div>
         </div>
 
         <!--SCULPTURE CARD-->
-        <div class="paint-card animate__animated animate__zoomIn m-5">
-          <div class="card-img">
+        <div
+          class="paint-card animate__animated animate__zoomIn m-5"
+          id="sculpture"
+        >
+          <div class="card-img" id="sculpture">
             <img
               src="https://cdn.citywonders.com/media/14852/michelangelos-statue-of-david.jpg?center=0.612,0.49833333333333335&mode=crop&width=1024&height=670”
        alt=“landscape-painting"
               alt=""
+              id="sculpture"
             />
           </div>
-          <div class="card-header-title is-centered is-size-5">Sculptures</div>
+          <div class="card-header-title is-centered is-size-5" id="sculpture">
+            Sculptures
+          </div>
         </div>
       </div>
     </main>
