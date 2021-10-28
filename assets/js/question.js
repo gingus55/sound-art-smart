@@ -270,11 +270,9 @@ const handleData = function (response) {
   // generate array of 6 objects
 
   // Shuffle array
-
   const shuffled = objArray.sort(() => 0.5 - Math.random());
 
-  // Get sub-array of first n elements after shuffled
-
+  // Get sub-array of first 6 elements after shuffled
   let selected = shuffled.slice(0, 6);
   // fetch data for each of the 6 objects from mock data headings
   console.log(selected);
