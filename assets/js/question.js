@@ -33,9 +33,18 @@ const paintingsArr = [
   {
     question: "Which medium do you like the look of?",
     cards: [
-      { name: "Oil", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
-      { name: "Watercolour", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
-      { name: "Tempera", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
+      {
+        name: "Oil",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+      {
+        name: "Watercolour",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+      {
+        name: "Tempera",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
     ],
   },
   {
@@ -51,13 +60,21 @@ const paintingsArr = [
         img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         deptId: "13",
       },
-      { name: "Islamic Art", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", deptId: "14" },
+      {
+        name: "Islamic Art",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        deptId: "14",
+      },
       {
         name: "Medieval Art",
         img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         deptId: "17",
       },
-      { name: "Modern Art", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", deptId: "21" },
+      {
+        name: "Modern Art",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        deptId: "21",
+      },
     ],
   },
 ];
@@ -83,10 +100,22 @@ const sculpturesArr = [
   {
     question: "Which medium do you like the look of?",
     cards: [
-      { name: "Clay", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
-      { name: "Marble", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
-      { name: "Metal", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" },
-      { name: "Gold", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" }
+      {
+        name: "Clay",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+      {
+        name: "Marble",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+      {
+        name: "Metal",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
+      {
+        name: "Gold",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      },
     ],
   },
   {
@@ -102,13 +131,21 @@ const sculpturesArr = [
         img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         deptId: "13",
       },
-      { name: "Islamic Art", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", deptId: "14" },
+      {
+        name: "Islamic Art",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        deptId: "14",
+      },
       {
         name: "Medieval Art",
         img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         deptId: "17",
       },
-      { name: "Modern Art", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", deptId: "21" },
+      {
+        name: "Modern Art",
+        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        deptId: "21",
+      },
     ],
   },
 ];
@@ -127,35 +164,23 @@ const storeKeyword = function (word) {
 
 // convert department to an ID for API call
 
-const convertKeywords = function(array){
-  const other =array.slice(3);
-  if (other=="Egyptian Art")
-  {
-    id = "10";
-  array[3]=id
-  }else if (other=="Greek and Roman Art")
-  {
-    id = "13";
-  array[3]=id
-  }else if (other=="Islamic Art")
-  {
-    id = "14";
-  array[3]=id
-  }else if (other=="Medieval Art")
-  {
-    id = "17";
-  array[3]=id
-  }else if (other=="Modern Art")
-  {
-    id = "21";
-  array[3]=id
+const convertKeywords = function (keywords) {
+  if (keywords.includes("Egyptian Art")) {
+    keywords[3] = "10";
+  } else if (keywords.includes("Greek and Roman Art")) {
+    keywords[3] = "13";
+  } else if (keywords.includes("Islamic Art")) {
+    keywords[3] = "14";
+  } else if (keywords.includes("Medieval Art")) {
+    keywords[3] = "17";
+  } else if (keywords.includes("Modern Art")) {
+    keywords[3] = "21";
   }
-console.log(array);
-
-}
+  console.log(keywords);
+};
 
 // build title
-const buildTitle = function (obj) {
+const buildTitle = function (title) {
   return ` 
   <div class="is-flex is-flex-wrap-wrap is-justify-content-space-around" id="placer">
 
@@ -169,75 +194,77 @@ const buildTitle = function (obj) {
     animate__animated animate__backInDown
   "
 >
-  ${obj.question}
+  ${title}
 </div></div>`;
 };
+
 // build cards
-const buildCards = function (array) {
-  array.cards.forEach((element) => {
-    answerCard = `<div class="paint-card animate__animated animate__zoomIn m-5" id="${element.name}">
-          <div class="card-img" id="${element.name}">
-            <img
-              src="${element.img}”
-       alt=“"
-              alt="" id="${element.name}"
-            />
-          </div>
-          <div class="card-header-title is-centered is-size-5" id="${element.name}">${element.name}</div>
-        </div>`;
+const buildCards = function (cards) {
+  cards.forEach((element) => {
+    const answerCard = `<div class="paint-card animate__animated animate__zoomIn m-5" id="${element.name}" name="question-card">
+      <div class="card-img" id="${element.name}" name="question-card">
+        <img
+          src="${element.img}”
+          alt=“"
+          alt="" id="${element.name}"
+          name="question-card"
+        />
+      </div>
+      <div class="card-header-title is-centered is-size-5" id="${element.name}" name="question-card">${element.name}</div>
+    </div>`;
+
     cardPlacer.append(answerCard);
   });
+
   return cardPlacer;
 };
 
 // RENDER QUESTIONS
 
-const renderQuestions = function(array){
-container.empty();
-cardPlacer.empty();
+const renderQuestions = function (questionObj, type) {
+  container.empty();
+  cardPlacer.empty();
   // render title
-const title = buildTitle(array);
+  const title = buildTitle(questionObj.question);
   // build cards
-const cards = buildCards(array);
+  const cards = buildCards(questionObj.cards);
   // append cards
-container.append(title, cards);
-}
+  container.attr("data-type", type);
+  container.append(title, cards);
+};
 
 var number = 0;
 
-const questionKeyClick = function (event) {
-  if (number < 3) {
-    const target = event.target.id;
-    storeKeyword(target);
-    renderQuestions(paintingsArr[number]);
-    number += 1;
-    console.log(number);
-  } else if (number === 3) {
-    const target = event.target.id;
-    storeKeyword(target);
-    container.empty();
-    const tempMessage = `<p>Getting your results...</p>`;
-    container.append(tempMessage);
-    convertKeywords(keyWords);
-    makeApiCall(keyWords);
-  }
+const getArrayByType = function (type) {
+  const mapper = {
+    painting: paintingsArr,
+    sculpture: sculpturesArr,
+  };
+
+  return mapper[type];
 };
 
-const questionKeyClickTwo = function (event) {
-  if (number < 3) {
-    const target = event.target.id;
-    storeKeyword(target);
-    renderQuestions(sculpturesArr[number]);
-    number += 1;
-    console.log(number);
-  } else if (number === 3) {
-    const target = event.target.id;
-    storeKeyword(target);
-    container.empty();
-    const tempMessage = `<p>Getting your results...</p>`;
-    container.append(tempMessage);
-    convertKeywords(keyWords);
-    makeApiCall(keyWords);
+const questionKeyClick = async function (event) {
+  const target = $(event.target);
+  const currentTarget = $(event.currentTarget);
+  const type = currentTarget.attr("data-type");
+
+  if (
+    target.is('div[name="question-card"]') ||
+    target.is('img[name="question-card"]')
+  ) {
+    storeKeyword(target.attr("id"));
+    if (number < 3) {
+      renderQuestions(getArrayByType(type)[number]);
+      number += 1;
+    } else if (number === 3) {
+      container.empty();
+      container.append(`<p>Getting your results...</p>`);
+      convertKeywords(keyWords);
+      const url = constructSearchUrl(keyWords);
+      const data = await getDataFromApi(url);
+      handleData(data);
+    }
   }
 };
 
@@ -246,14 +273,14 @@ const handleClick = function (event) {
   const target = event.target;
   if (target.id === "painting") {
     storeKeyword(target.id);
-    renderQuestions(paintingsArr[number]);
+    renderQuestions(paintingsArr[number], "painting");
     number += 1;
     container.on("click", questionKeyClick);
   } else if (target.id === "sculpture") {
     storeKeyword(target.id);
-    renderQuestions(sculpturesArr[number]);
+    renderQuestions(sculpturesArr[number], "sculpture");
     number += 1;
-    container.on("click", questionKeyClickTwo);
+    container.on("click", questionKeyClick);
   }
 
   // RENDER NEXT QUESTION
@@ -264,7 +291,7 @@ const handleResponse = function (response) {
   return response.json();
 };
 
-const handleData = function (response) {
+const handleData = async function (response) {
   console.log(response);
   const objArray = response.objectIDs;
   // generate array of 6 objects
@@ -273,14 +300,36 @@ const handleData = function (response) {
   const shuffled = objArray.sort(() => 0.5 - Math.random());
 
   // Get sub-array of first 6 elements after shuffled
-  let selected = shuffled.slice(0, 6);
+  const objectIds = shuffled.slice(0, 6);
   // fetch data for each of the 6 objects from mock data headings
-  console.log(selected);
+  console.log(objectIds);
+
+  // map through object ids
+  // construct a promise
+  // promise all
+
+  const getPromise = function (objectId) {
+    const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectId}`;
+    return getDataFromApi(url);
+  };
+
+  const promises = objectIds.map(getPromise);
+  console.log(promises);
+
+  const allData = await Promise.all(promises);
+  console.log(allData);
 
   // perhaps generate keywords for a quotation API call
-};;
+};
 
-const makeApiCall = function (keyWords) {
+const getDataFromApi = async function (url) {
+  const response = await fetch(url);
+  const data = await response.json();
+
+  return data;
+};
+
+const constructSearchUrl = function (keyWords) {
   console.log(keyWords);
   // construct url
   const dept = keyWords[3];
@@ -289,9 +338,8 @@ const makeApiCall = function (keyWords) {
   const searchWordTwo = keyWords[1];
   const searchWordThree = keyWords[2];
   const myUrl = `https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=${dept}&q=${searchWordOne}, ${searchWordTwo}, ${searchWordThree}`;
-  // make call
-  console.log(myUrl);
-  fetch(myUrl).then(handleResponse).then(handleData);
+
+  return myUrl;
 };
 
 // DOCUMENT ONLOAD
