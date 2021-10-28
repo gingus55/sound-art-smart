@@ -222,42 +222,58 @@ const questionKeyClick = function(event){
 }
 }
 
-const questionKeyClickTwo = function(event){
-  if(number<3){
+const questionKeyClickTwo = function (event) {
+  if (number < 3) {
     const target = event.target.id;
     storeKeyword(target);
     renderQuestions(sculpturesArr[number]);
-    number+=1;
+    number += 1;
     console.log(number);
-  } else if (number===3){
+  } else if (number === 3) {
     const target = event.target.id;
     storeKeyword(target);
     container.empty();
     const tempMessage = `<p>Getting your results...</p>`;
     container.append(tempMessage);
     convertKeywords(keyWords);
-
+    makeApiCall();
   }
-}
+};
 
 // handleClick needs to store keyword and render next question
 const handleClick = function (event) {
-
   const target = event.target;
   if (target.id === "painting") {
-  storeKeyword(target.id);
-  renderQuestions(paintingsArr[number]);
-  number+=1
-  container.on("click", questionKeyClick);
-  } else if(target.id ==="sculpture"){
-  storeKeyword(target.id);
-  renderQuestions(sculpturesArr[number]);
-  number+=1;
-  container.on("click", questionKeyClickTwo);
-  };
- 
+    storeKeyword(target.id);
+    renderQuestions(paintingsArr[number]);
+    number += 1;
+    container.on("click", questionKeyClick);
+  } else if (target.id === "sculpture") {
+    storeKeyword(target.id);
+    renderQuestions(sculpturesArr[number]);
+    number += 1;
+    container.on("click", questionKeyClickTwo);
+  }
+
   // RENDER NEXT QUESTION
-};;
+};
+
+// look at making an API call to generate proposed pieces
+const handleResponse = function (response) {
+  return response.json();
+};
+
+const handleData = function (response) {
+  console.log(response);
+};
+
+const makeApiCall = function (keyWords) {
+  // construct url
+  const myUrl = `https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=${keyWords[3]}&q=${keyWords[0]}, ${keyWords[1]}, ${keyWords[2]}`;
+  // make call
+  console.log(myUrl);
+  // fetch(myUrl).then(handleResponse).then(handleData);
+};
 
 // DOCUMENT ONLOAD
 const onReady = function () {
