@@ -1,0 +1,95 @@
+:root {
+  --aqua: #a9c7c3;
+  --turquoise: #4d6663;
+  --coral: #e07069;
+  --ivory: #f1efe8;
+  --green: #4daa59;
+}
+
+* {
+  box-sizing: border-box;
+  /* border: 1px solid #000000; */
+}
+
+body {
+  margin: 0;
+  /* background image properties */
+  background-image: linear-gradient(to bottom, var(--ivory), #f1efe88c),
+    url("https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-color: var(--ivory);
+}
+
+.header {
+  min-height: 5vh;
+}
+
+#nav-bar-bg {
+  background-color: var(--aqua);
+  background-color: var(--turquoise);
+  background-image: linear-gradient(
+    319deg,
+    var(--aqua) 0%,
+    var(--ivory) 37%,
+    var(--turquoise) 100%
+  );
+}
+
+#burger {
+  max-height: 100px;
+}
+
+#navbar-logo {
+  width: 48px;
+  height: 36px;
+}
+
+.main {
+  display: flex;
+  min-height: 95vh;
+}
+
+#introduction {
+  text-align: center;
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: var(--ivory);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.title {
+  padding-bottom: 10px;
+}
+
+#landing-quote {
+  font-family: "Bad Script", sans-serif;
+  font-weight: 700;
+}
+
+.landing-description {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+#start-btn {
+  margin: auto;
+  background-color: var(--coral);
+  color: white;
+  font-weight: 700;
+}
+
+#start-btn:hover {
+  background-color: #e2554b;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+}
