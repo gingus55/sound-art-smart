@@ -24,15 +24,15 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./assets/css/landingpage.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
     <!-- NAVBAR -->
-    <header>
+    <header class="header">
       <nav class="navbar has-shadow" id="nav-bar-bg">
         <!-- LOGO -->
         <div class="navbar-brand">
-          <a href="" class="navbar-item py-2 px-2">
+          <a href="./index.html" class="navbar-item py-2 px-2">
             <img
               src="https://www.washingtoncenter.org/wp-content/uploads/2018/07/Arts-Guild-Logo-1-Black-Copy.jpg"
               alt="logo"
@@ -50,8 +50,8 @@
 
         <!-- MENU LINKS -->
         <div class="navbar-menu" id="nav-links">
-          <div class="navbar-end">
-            <a href="./landingpage.html" class="navbar-item is-size-5">Home</a>
+          <div class="navbar-end pr-2">
+            <a href="./index.html" class="navbar-item is-size-5">Home</a>
             <a href="./question.html" class="navbar-item is-size-5"
               >Get Started</a
             >
@@ -59,14 +59,14 @@
               >Favourites</a
             >
             <a href="./gallery.html" class="navbar-item is-size-5">Gallery</a>
-            <a href="" class="navbar-item is-size-5">About Us</a>
+            <a href="./about.html" class="navbar-item is-size-5">About Us</a>
           </div>
         </div>
       </nav>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main>
+    <main class="main">
       <section id="introduction">
         <h1 class="title is-1 has-text-centered">Welcome to Sound Art Smart</h1>
         <h2 class="subtitle is-4 has-text-centered" id="landing-quote">
@@ -81,7 +81,11 @@
           additional information on each. Then save your favourites and even
           create your own gallery!
         </p>
-        <a href="./question.html" class="button" id="start-btn">Get Started</a>
+        <div>
+          <a href="./question.html" class="button" id="start-btn"
+            >Get Started</a
+          >
+        </div>
       </section>
     </main>
     <!-- jQuery link -->
@@ -89,6 +93,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./assets/js/landingpage.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
