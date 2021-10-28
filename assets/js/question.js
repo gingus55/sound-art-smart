@@ -125,6 +125,35 @@ const storeKeyword = function (word) {
   console.log(keyWords);
 };
 
+// convert department to an ID for API call
+
+const convertKeywords = function(array){
+  const other =array.slice(3);
+  if (other=="Egyptian Art")
+  {
+    id = "10";
+  array[3]=id
+  }else if (other=="Greek and Roman Art")
+  {
+    id = "13";
+  array[3]=id
+  }else if (other=="Islamic Art")
+  {
+    id = "14";
+  array[3]=id
+  }else if (other=="Medieval Art")
+  {
+    id = "17";
+  array[3]=id
+  }else if (other=="Modern Art")
+  {
+    id = "21";
+  array[3]=id
+  }
+console.log(array);
+
+}
+
 // build title
 const buildTitle = function (obj) {
   return ` 
@@ -177,17 +206,38 @@ container.append(title, cards);
 var number = 0;
 
 const questionKeyClick = function(event){
+  if(number<3){
   const target = event.target.id;
   storeKeyword(target);
   renderQuestions(paintingsArr[number]);
   number+=1;
+  console.log(number);
+} else if (number===3){
+  const target = event.target.id;
+  storeKeyword(target);
+  container.empty();
+  const tempMessage = `<p>Getting your results...</p>`;
+  container.append(tempMessage);
+  convertKeywords(keyWords);
+}
 }
 
 const questionKeyClickTwo = function(event){
-  const target = event.target.id;
-  storeKeyword(target);
-  renderQuestions(sculpturesArr[number]);
-  number+=1;
+  if(number<3){
+    const target = event.target.id;
+    storeKeyword(target);
+    renderQuestions(sculpturesArr[number]);
+    number+=1;
+    console.log(number);
+  } else if (number===3){
+    const target = event.target.id;
+    storeKeyword(target);
+    container.empty();
+    const tempMessage = `<p>Getting your results...</p>`;
+    container.append(tempMessage);
+    convertKeywords(keyWords);
+
+  }
 }
 
 // handleClick needs to store keyword and render next question
