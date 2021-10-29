@@ -81,7 +81,7 @@ body {
 }
 
 #start-btn,
-.object-save-btn {
+.view-object-btn {
   margin: auto;
   background-color: var(--coral);
   color: white;
@@ -89,15 +89,17 @@ body {
 }
 
 #start-btn:hover,
-.object-save-btn:hover {
+.view-object-btn:hover {
   background-color: var(--btn-hover);
   color: white;
 }
 
 /* CARDS Styles */
-.paint-card {
+.paint-card,
+.object-card {
   width: 18rem;
-  height: 18rem;
+  /* height: 18rem; */
+  height: 100%;
   border: 1px solid #a3a3a3;
   padding: 16px;
   border-radius: 4px;
@@ -107,6 +109,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
 .card-img img {
   width: 100%;
   max-height: 180px;
@@ -126,7 +129,12 @@ body {
   justify-content: space-evenly;
 }
 
-/* Adjust background fit responsiveness*/
+.view-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Adjust background image responsiveness */
 @media only screen and (max-width: 768px) {
   body {
     height: auto;
