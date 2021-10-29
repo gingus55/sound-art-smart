@@ -242,30 +242,6 @@ const getArrayByType = function (type) {
   return mapper[type];
 };
 
-const questionKeyClick = async function (event) {
-  const target = $(event.target);
-  const currentTarget = $(event.currentTarget);
-  const type = currentTarget.attr("data-type");
-
-  if (
-    target.is('div[name="question-card"]') ||
-    target.is('img[name="question-card"]')
-  ) {
-    storeKeyword(target.attr("id"));
-    if (number < 3) {
-      renderQuestions(getArrayByType(type)[number]);
-      number += 1;
-    } else if (number === 3) {
-      container.empty();
-      container.append(`<p>Getting your results...</p>`);
-      convertKeywords(keyWords);
-      const url = constructSearchUrl(keyWords);
-      const data = await getDataFromApi(url);
-      handleData(data);
-    }
-  }
-};
-
 // handleClick needs to store keyword and render next question
 const handleClick = function (event) {
   const target = event.target;
@@ -305,6 +281,27 @@ const getObjectData = function (allData) {
   return allData.map(callback);
 };
 
+const renderObjectResults = function (objectData) {
+  container.empty();
+  const constructObjectResults = function (each) {
+    return `<div class="object-card animate__animated animate__zoomIn m-5">
+    <div class="card-img">
+      <img src="${each.imageUrl}" alt="" />
+    </div>
+    <div class="card-header-title has-text-centered is-size-5 is-italic">
+      ${each.title}
+    </div>
+    <div class="view-btn-container">
+      <button class="view-object-btn button"}">View More Info</button>
+    </div>
+  </div>`;
+  };
+  const objectResultCards = objectData.map(constructObjectResults).join("");
+  const objectResultsContainer = `<section id="object-cards-container">${objectResultCards}</section>`;
+
+  container.append(objectResultsContainer);
+};
+
 const handleData = async function (response) {
   console.log(response);
   const objArray = response.objectIDs;
@@ -329,9 +326,34 @@ const handleData = async function (response) {
   const allData = await Promise.all(promises);
   console.log(allData);
 
-  const objectData = getObjectData(allData);
-  // return objectData;
-  console.log(objectData);
+  const objectData = await getObjectData(allData);
+  return objectData;
+  // console.log(objectData);
+};
+
+const questionKeyClick = async function (event) {
+  const target = $(event.target);
+  const currentTarget = $(event.currentTarget);
+  const type = currentTarget.attr("data-type");
+
+  if (
+    target.is('div[name="question-card"]') ||
+    target.is('img[name="question-card"]')
+  ) {
+    storeKeyword(target.attr("id"));
+    if (number < 3) {
+      renderQuestions(getArrayByType(type)[number]);
+      number += 1;
+    } else if (number === 3) {
+      container.empty();
+      container.append(`<p>Getting your results...</p>`);
+      convertKeywords(keyWords);
+      const url = constructSearchUrl(keyWords);
+      const data = await getDataFromApi(url);
+      const objectData = await handleData(data);
+      renderObjectResults(objectData);
+    }
+  }
 };
 
 const getDataFromApi = async function (url) {
