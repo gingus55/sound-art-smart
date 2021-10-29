@@ -40,6 +40,24 @@ body {
   max-height: 100px;
 }
 
+.container {
+  margin: 0px 100px;
+}
+
+.paint-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sculpture-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /* cards styling */
 
 .paint-card {
