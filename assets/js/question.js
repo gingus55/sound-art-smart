@@ -1,5 +1,3 @@
-console.log("howdy planet");
-
 // NAVBAR -- mobile menu
 const navbarMenu = function () {
   const burgerIcon = $("#burger");
@@ -11,6 +9,7 @@ const navbarMenu = function () {
 
   burgerIcon.on("click", isActiveBurgerIcon);
 };
+
 // ARRAYS FOR PAINTINGS AND SCULPTURES
 const paintingsArr = [
   {
@@ -164,7 +163,6 @@ const storeKeyword = function (word) {
 };
 
 // convert department to an ID for API call
-
 const convertKeywords = function (keywords) {
   if (keywords.includes("Egyptian Art")) {
     keywords[3] = "10";
@@ -180,7 +178,6 @@ const convertKeywords = function (keywords) {
   console.log(keywords);
 };
 
-// build title
 const buildTitle = function (title) {
   return ` 
   <div class="is-flex is-flex-wrap-wrap is-justify-content-space-around" id="placer">
@@ -292,6 +289,22 @@ const handleResponse = function (response) {
   return response.json();
 };
 
+// transform allData object to objectData
+const getObjectData = function (allData) {
+  const callback = function (each) {
+    return {
+      title: each.title,
+      artist: each.artistDisplayName,
+      imageUrl: each.primaryImage,
+      date: each.objectDate,
+      medium: each.medium,
+      culture: each.culture,
+      wikiLink: each.objectWikidata_URL,
+    };
+  };
+  return allData.map(callback);
+};
+
 const handleData = async function (response) {
   console.log(response);
   const objArray = response.objectIDs;
@@ -305,10 +318,6 @@ const handleData = async function (response) {
   // fetch data for each of the 6 objects from mock data headings
   console.log(objectIds);
 
-  // map through object ids
-  // construct a promise
-  // promise all
-
   const getPromise = function (objectId) {
     const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectId}`;
     return getDataFromApi(url);
@@ -320,7 +329,9 @@ const handleData = async function (response) {
   const allData = await Promise.all(promises);
   console.log(allData);
 
-  // perhaps generate keywords for a quotation API call
+  const objectData = getObjectData(allData);
+  // return objectData;
+  console.log(objectData);
 };
 
 const getDataFromApi = async function (url) {
