@@ -149,6 +149,7 @@ const sculpturesArr = [
     ],
   },
 ];
+
 // CODE FOR QUESTION LOGIC
 // PAGE TARGETS
 const container = $("#question-container");
