@@ -292,7 +292,7 @@ const renderObjectResults = function (objectData) {
       ${each.title}
     </div>
     <div class="view-btn-container">
-      <button class="view-object-btn button"}">View More Info</button>
+      <button class="view-object-btn button" id="">View More Info</button>
     </div>
   </div>`;
   };
@@ -375,6 +375,8 @@ const constructSearchUrl = function (keyWords) {
 
   return myUrl;
 };
+
+// View Object
 
 // DOCUMENT ONLOAD
 const onReady = function () {
