@@ -11,171 +11,33 @@ const navbarMenu = function () {
 };
 
 // ARRAYS FOR PAINTINGS AND SCULPTURES
-const paintingsArr = [
-  {
-    question: "Which do you prefer?",
-    cards: [
-      {
-        name: "People",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Places",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Animals",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-    ],
-  },
-  {
-    question: "Which medium do you like the look of?",
-    cards: [
-      {
-        name: "Oil",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Watercolour",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Tempera",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-    ],
-  },
-  {
-    question: "Which style do you fancy?",
-    cards: [
-      {
-        name: "Egyptian Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "10",
-      },
-      {
-        name: "Greek and Roman Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "13",
-      },
-      {
-        name: "Islamic Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "14",
-      },
-      {
-        name: "Medieval Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "17",
-      },
-      {
-        name: "Modern Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "21",
-      },
-    ],
-  },
-];
 
-const sculpturesArr = [
-  {
-    question: "Which do you prefer?",
-    cards: [
-      {
-        name: "People",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Places",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Animals",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-    ],
-  },
-  {
-    question: "Which medium do you like the look of?",
-    cards: [
-      {
-        name: "Clay",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Marble",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Metal",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Gold",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-    ],
-  },
-  {
-    question: "Which style do you fancy?",
-    cards: [
-      {
-        name: "Egyptian Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "10",
-      },
-      {
-        name: "Greek and Roman Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "13",
-      },
-      {
-        name: "Islamic Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "14",
-      },
-      {
-        name: "Medieval Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "17",
-      },
-      {
-        name: "Modern Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "21",
-      },
-    ],
-  },
-];
 
 // CODE FOR QUESTION LOGIC
 // PAGE TARGETS
 const container = $("#question-container");
 const cardPlacer = $("#placer");
 
-// EMPTY ARRAY FOR KEYWORD STORAGE
-const keyWords = [];
 
-const storeKeyword = function (word) {
-  keyWords.push(word);
-  console.log(keyWords);
-};
+
+
 
 // convert department to an ID for API call
 const convertKeywords = function (keywords) {
+  const userChoices = [...keywords]
   if (keywords.includes("Egyptian Art")) {
-    keywords[3] = "10";
+    userChoices[3] = "10";
   } else if (keywords.includes("Greek and Roman Art")) {
-    keywords[3] = "13";
+    userChoices[3] = "13";
   } else if (keywords.includes("Islamic Art")) {
-    keywords[3] = "14";
+    userChoices[3] = "14";
   } else if (keywords.includes("Medieval Art")) {
-    keywords[3] = "17";
+    userChoices[3] = "17";
   } else if (keywords.includes("Modern Art")) {
-    keywords[3] = "21";
-  }
-  console.log(keywords);
+    userChoices[3] = "21";
+  } 
+  return userChoices
+  console.log(userChoices);
 };
 
 const buildTitle = function (title) {
@@ -231,7 +93,7 @@ const renderQuestions = function (questionObj, type) {
   container.append(title, cards);
 };
 
-var number = 0;
+let currentQuestionIndex = 0;
 
 const getArrayByType = function (type) {
   const mapper = {
@@ -247,13 +109,13 @@ const handleClick = function (event) {
   const target = event.target;
   if (target.id === "painting") {
     storeKeyword(target.id);
-    renderQuestions(paintingsArr[number], "painting");
-    number += 1;
+    renderQuestions(paintingsArr[currentQuestionIndex], "painting");
+    currentQuestionIndex += 1;
     container.on("click", questionKeyClick);
   } else if (target.id === "sculpture") {
     storeKeyword(target.id);
-    renderQuestions(sculpturesArr[number], "sculpture");
-    number += 1;
+    renderQuestions(sculpturesArr[currentQuestionIndex], "sculpture");
+    currentQuestionIndex += 1;
     container.on("click", questionKeyClick);
   }
 
@@ -286,7 +148,8 @@ const getObjectData = function (allData) {
 const renderObjectResults = function (objectData) {
   container.empty();
   const constructObjectResults = function (each) {
-    return `<div class="object-card animate__animated animate__zoomIn m-5">
+    const redirectLink = `./view-object-results.html?objectid=${each.objectID}`;
+    return `<div id="object-id-card-container" class="object-card animate__animated animate__zoomIn m-5">
     <div class="card-img">
       <img src="${each.imageUrl}" alt="" />
     </div>
@@ -294,9 +157,9 @@ const renderObjectResults = function (objectData) {
       ${each.title}
     </div>
     <div class="view-btn-container">
-      <button class="view-object-btn button" id="${JSON.stringify(
-        each.objectID
-      )}">View More Info</button>
+      <a href=${redirectLink} class="view-object-btn button" id="${JSON.stringify(
+      each.objectID
+    )}">View More Info</a>
     </div>
   </div>`;
   };
@@ -344,14 +207,14 @@ const questionKeyClick = async function (event) {
     target.is('img[name="question-card"]')
   ) {
     storeKeyword(target.attr("id"));
-    if (number < 3) {
-      renderQuestions(getArrayByType(type)[number]);
-      number += 1;
-    } else if (number === 3) {
+    if (currentQuestionIndex < 3) {
+      renderQuestions(getArrayByType(type)[currentQuestionIndex]);
+      currentQuestionIndex += 1;
+    } else if (currentQuestionIndex === 3) {
       container.empty();
       container.append(`<p>Getting your results...</p>`);
-      convertKeywords(keyWords);
-      const url = constructSearchUrl(keyWords);
+      const keywords = convertKeywords(keyWords);
+      const url = constructSearchUrl(keywords);
       const data = await getDataFromApi(url);
       const objectData = await handleData(data);
       renderObjectResults(objectData);
@@ -379,14 +242,46 @@ const constructSearchUrl = function (keyWords) {
   return myUrl;
 };
 
-// View Object
+const objectIdCardContainer = $("#object-cards-container");
+
+// View Object click handler function
+const handleViewObjectClick = function (event) {
+  const target = $(event.target);
+  if (target.is("button")) {
+    console.log("button clicked");
+  }
+  console.log(target);
+};
+
+// initialize LS
+function InitializeLocalStorage() {
+  const objectInfo = JSON.parse(localStorage.getItem("object-data"));
+  if (!objectInfo) {
+    return localStorage.setItem("object-data", JSON.stringify([]));
+  }
+}
+
+function getFromLocalStorage() {
+  const localStorageData = JSON.parse(localStorage.getItem("object-data"));
+  return localStorageData === null ? JSON.stringify([]) : localStorageData;
+}
 
 // DOCUMENT ONLOAD
 const onReady = function () {
+  // call mobile navbar burger menu
   navbarMenu();
+
+  // set local storage
+  InitializeLocalStorage();
+
+  // get from local storage
+  getFromLocalStorage();
 
   // NEED WORKING CLICK EVENT
   container.on("click", handleClick);
+
+  // click to view object info page
+  objectIdCardContainer.on("click", handleViewObjectClick);
 };
 
 $(document).ready(onReady);

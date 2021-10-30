@@ -11,8 +11,23 @@ const navbarMenu = function () {
   burgerIcon.on("click", isActiveBurgerIcon);
 };
 
+console.log(keyWords);
+
 // store container of the results page in a variable to append into
 const bodyContainer = $("body");
+
+const handleResponse = function (response) {
+  return response.json();
+};
+
+// Make Api call
+const makeObjectCall = async function () {
+  const urlObjectId = new URL(window.location).search.split("=")[1];
+  const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${urlObjectId}`;
+  const data = await apiRequest(url);
+  console.log(data);
+  // fetch(url).then(handleResponse).then(handleData);
+};
 
 // construct the main page of the individual results page
 const renderMainSectionOfResults = function (objectData) {
@@ -275,6 +290,8 @@ const renderAllAccordions = function (artWorkAccordion, userArray) {
 // document on load
 const onReady = function () {
   navbarMenu();
+
+  makeObjectCall();
 
   appendAllObjectResultContentToBody();
 
