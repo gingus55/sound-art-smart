@@ -37,7 +37,6 @@ const convertKeywords = function (keywords) {
     userChoices[3] = "21";
   } 
   return userChoices
-  console.log(userChoices);
 };
 
 const buildTitle = function (title) {
@@ -160,6 +159,7 @@ const renderObjectResults = function (objectData) {
       <a href=${redirectLink} class="view-object-btn button" id="${JSON.stringify(
       each.objectID
     )}">View More Info</a>
+    <a class="view-object-btn button" id="save-btn">Save to favourites</a>
     </div>
   </div>`;
   };
