@@ -231,7 +231,7 @@ const renderQuestions = function (questionObj, type) {
   container.append(title, cards);
 };
 
-var number = 0;
+let currentQuestionIndex = 0;
 
 const getArrayByType = function (type) {
   const mapper = {
@@ -247,13 +247,13 @@ const handleClick = function (event) {
   const target = event.target;
   if (target.id === "painting") {
     storeKeyword(target.id);
-    renderQuestions(paintingsArr[number], "painting");
-    number += 1;
+    renderQuestions(paintingsArr[currentQuestionIndex], "painting");
+    currentQuestionIndex += 1;
     container.on("click", questionKeyClick);
   } else if (target.id === "sculpture") {
     storeKeyword(target.id);
-    renderQuestions(sculpturesArr[number], "sculpture");
-    number += 1;
+    renderQuestions(sculpturesArr[currentQuestionIndex], "sculpture");
+    currentQuestionIndex += 1;
     container.on("click", questionKeyClick);
   }
 
@@ -344,10 +344,10 @@ const questionKeyClick = async function (event) {
     target.is('img[name="question-card"]')
   ) {
     storeKeyword(target.attr("id"));
-    if (number < 3) {
-      renderQuestions(getArrayByType(type)[number]);
-      number += 1;
-    } else if (number === 3) {
+    if (currentQuestionIndex < 3) {
+      renderQuestions(getArrayByType(type)[currentQuestionIndex]);
+      currentQuestionIndex += 1;
+    } else if (currentQuestionIndex === 3) {
       container.empty();
       container.append(`<p>Getting your results...</p>`);
       convertKeywords(keyWords);
@@ -381,9 +381,25 @@ const constructSearchUrl = function (keyWords) {
 
 // View Object
 
+// initialize LS
+
+function InitializeLocalStorage() {
+  const objectInfo = JSON.parse(localStorage.getItem("object"));
+  if (!objectInfo) {
+    return localStorage.setItem("object", JSON.stringify([]));
+  }
+}
+
+function getFromLocalStorage() {
+  const localStorageData = JSON.parse(localStorage.getItem("object"));
+  return localStorageData === null ? JSON.stringify([]) : localStorageData;
+}
+
 // DOCUMENT ONLOAD
 const onReady = function () {
   navbarMenu();
+  InitializeLocalStorage();
+  getFromLocalStorage();
 
   // NEED WORKING CLICK EVENT
   container.on("click", handleClick);
