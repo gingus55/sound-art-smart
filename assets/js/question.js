@@ -1,5 +1,3 @@
-console.log("howdy planet");
-
 // NAVBAR -- mobile menu
 const navbarMenu = function () {
   const burgerIcon = $("#burger");
@@ -11,6 +9,7 @@ const navbarMenu = function () {
 
   burgerIcon.on("click", isActiveBurgerIcon);
 };
+
 // ARRAYS FOR PAINTINGS AND SCULPTURES
 const paintingsArr = [
   {
@@ -149,6 +148,7 @@ const sculpturesArr = [
     ],
   },
 ];
+
 // CODE FOR QUESTION LOGIC
 // PAGE TARGETS
 const container = $("#question-container");
@@ -163,7 +163,6 @@ const storeKeyword = function (word) {
 };
 
 // convert department to an ID for API call
-
 const convertKeywords = function (keywords) {
   if (keywords.includes("Egyptian Art")) {
     keywords[3] = "10";
@@ -179,7 +178,6 @@ const convertKeywords = function (keywords) {
   console.log(keywords);
 };
 
-// build title
 const buildTitle = function (title) {
   return ` 
   <div class="is-flex is-flex-wrap-wrap is-justify-content-space-around" id="placer">
@@ -244,30 +242,6 @@ const getArrayByType = function (type) {
   return mapper[type];
 };
 
-const questionKeyClick = async function (event) {
-  const target = $(event.target);
-  const currentTarget = $(event.currentTarget);
-  const type = currentTarget.attr("data-type");
-
-  if (
-    target.is('div[name="question-card"]') ||
-    target.is('img[name="question-card"]')
-  ) {
-    storeKeyword(target.attr("id"));
-    if (number < 3) {
-      renderQuestions(getArrayByType(type)[number]);
-      number += 1;
-    } else if (number === 3) {
-      container.empty();
-      container.append(`<p>Getting your results...</p>`);
-      convertKeywords(keyWords);
-      const url = constructSearchUrl(keyWords);
-      const data = await getDataFromApi(url);
-      handleData(data);
-    }
-  }
-};
-
 // handleClick needs to store keyword and render next question
 const handleClick = function (event) {
   const target = event.target;
@@ -291,6 +265,47 @@ const handleResponse = function (response) {
   return response.json();
 };
 
+// transform allData object to objectData
+const getObjectData = function (allData) {
+  const callback = function (each) {
+    return {
+      title: each.title,
+      artist: each.artistDisplayName,
+      imageUrl: each.primaryImage,
+      date: each.objectDate,
+      medium: each.medium,
+      culture: each.culture,
+      wikiLink: each.objectWikidata_URL,
+      objectID: each.objectID,
+    };
+  };
+  console.log(allData);
+  return allData.map(callback);
+};
+
+const renderObjectResults = function (objectData) {
+  container.empty();
+  const constructObjectResults = function (each) {
+    return `<div class="object-card animate__animated animate__zoomIn m-5">
+    <div class="card-img">
+      <img src="${each.imageUrl}" alt="" />
+    </div>
+    <div class="card-header-title has-text-centered is-size-5 is-italic">
+      ${each.title}
+    </div>
+    <div class="view-btn-container">
+      <button class="view-object-btn button" id="${JSON.stringify(
+        each.objectID
+      )}">View More Info</button>
+    </div>
+  </div>`;
+  };
+  const objectResultCards = objectData.map(constructObjectResults).join("");
+  const objectResultsContainer = `<section id="object-cards-container">${objectResultCards}</section>`;
+
+  container.append(objectResultsContainer);
+};
+
 const handleData = async function (response) {
   console.log(response);
   const objArray = response.objectIDs;
@@ -304,10 +319,6 @@ const handleData = async function (response) {
   // fetch data for each of the 6 objects from mock data headings
   console.log(objectIds);
 
-  // map through object ids
-  // construct a promise
-  // promise all
-
   const getPromise = function (objectId) {
     const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectId}`;
     return getDataFromApi(url);
@@ -319,7 +330,33 @@ const handleData = async function (response) {
   const allData = await Promise.all(promises);
   console.log(allData);
 
-  // perhaps generate keywords for a quotation API call
+  const objectData = await getObjectData(allData);
+  return objectData;
+};
+
+const questionKeyClick = async function (event) {
+  const target = $(event.target);
+  const currentTarget = $(event.currentTarget);
+  const type = currentTarget.attr("data-type");
+
+  if (
+    target.is('div[name="question-card"]') ||
+    target.is('img[name="question-card"]')
+  ) {
+    storeKeyword(target.attr("id"));
+    if (number < 3) {
+      renderQuestions(getArrayByType(type)[number]);
+      number += 1;
+    } else if (number === 3) {
+      container.empty();
+      container.append(`<p>Getting your results...</p>`);
+      convertKeywords(keyWords);
+      const url = constructSearchUrl(keyWords);
+      const data = await getDataFromApi(url);
+      const objectData = await handleData(data);
+      renderObjectResults(objectData);
+    }
+  }
 };
 
 const getDataFromApi = async function (url) {
@@ -341,6 +378,8 @@ const constructSearchUrl = function (keyWords) {
 
   return myUrl;
 };
+
+// View Object
 
 // DOCUMENT ONLOAD
 const onReady = function () {
