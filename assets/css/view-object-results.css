@@ -131,3 +131,17 @@ body {
   overflow: hidden;
   transition: 1000ms ease max-height;
 }
+
+/* MOBILE RESPONSIVENESS  */
+@media only screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  #img-facts-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
