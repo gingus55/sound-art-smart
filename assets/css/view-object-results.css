@@ -41,3 +41,38 @@ body {
 #burger {
   max-height: 100px;
 }
+
+/* margin of whole MAIN page */
+
+.margin-adjustment {
+  margin: 0 60px;
+  background-color: rgba(255, 255, 240, 0.5);
+}
+
+/* art work img styling */
+
+.paint-card {
+  width: 35rem;
+  height: auto;
+  border: 1px solid #a3a3a3;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px #d4d4d4;
+  background-color: rgba(245, 255, 240, 0);
+}
+
+.card-img img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Art Work Facts and img Container */
+
+.art-works-fact-container {
+  margin: 50px 0;
+}
+
+#facts {
+  line-height: 50px;
+}
