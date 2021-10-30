@@ -245,3 +245,22 @@ const generateUserAccordion = function (userArray) {
 
   return userArray.forEach(fullAccordion);
 };
+
+// add an event listener to the + sign to create the accordion drop down effect
+const handleAccordionFunctionality = function () {
+  const accordionsTitle = document.querySelectorAll(".accordions-title");
+
+  accordionsTitle.forEach((eachAccordionTitle) => {
+    eachAccordionTitle.addEventListener("click", () => {
+      const height = eachAccordionTitle.nextElementSibling.scrollHeight;
+
+      eachAccordionTitle.classList.toggle("active-headers");
+
+      if (eachAccordionTitle.classList.contains("active-headers")) {
+        eachAccordionTitle.nextElementSibling.style.maxHeight = `${height}px`;
+      } else {
+        eachAccordionTitle.nextElementSibling.style.maxHeight = "0px";
+      }
+    });
+  });
+};
