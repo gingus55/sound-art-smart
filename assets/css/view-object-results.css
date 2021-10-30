@@ -1,0 +1,147 @@
+:root {
+  --aqua: #a9c7c3;
+  --turquoise: #4d6663;
+  --coral: #e07069;
+  --ivory: #f1efe8;
+  --green: #4daa59;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+
+  background-image: linear-gradient(to bottom, var(--ivory), #f1efe88c),
+    url("https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80");
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-color: var(--ivory);
+}
+
+/* NAV BAR */
+
+#nav-bar-bg {
+  background-color: var(--aqua);
+  background-color: var(--turquoise);
+  background-image: linear-gradient(
+    319deg,
+    var(--aqua) 0%,
+    var(--ivory) 37%,
+    var(--turquoise) 100%
+  );
+}
+
+#navbar-logo,
+#burger {
+  max-height: 100px;
+}
+
+/* margin of whole MAIN page */
+
+.margin-adjustment {
+  margin: 0 60px;
+  background-color: rgba(255, 255, 240, 0.5);
+}
+
+/* art work img styling */
+
+.paint-card {
+  width: 35rem;
+  height: auto;
+  border: 1px solid #a3a3a3;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px #d4d4d4;
+  background-color: rgba(245, 255, 240, 0);
+}
+
+.card-img img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Art Work Facts and img Container */
+
+.art-works-fact-container {
+  margin: 50px 0;
+}
+
+#facts {
+  line-height: 50px;
+}
+
+/* Quotation  */
+
+#quote-box {
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: auto;
+  width: auto;
+  border: 1px solid #a3a3a3;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px #d4d4d4;
+  background-color: rgba(255, 255, 240, 0.74);
+}
+
+/* Further Info About the Art Work accordion*/
+
+.accordions-container {
+  background-color: ;
+}
+
+.accordions {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.accordions-item {
+  padding: 20px;
+  margin-bottom: 0;
+  background-color: white;
+}
+
+.accordions-title {
+  display: flex;
+  cursor: pointer;
+}
+
+.accordions-title::after {
+  content: "+";
+  font-size: 40px;
+  margin-left: auto;
+}
+
+.active-headers::after {
+  content: "-";
+}
+
+.accordions-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1000ms ease max-height;
+}
+
+/* MOBILE RESPONSIVENESS  */
+@media only screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  #img-facts-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
