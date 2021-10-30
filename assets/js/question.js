@@ -276,8 +276,10 @@ const getObjectData = function (allData) {
       medium: each.medium,
       culture: each.culture,
       wikiLink: each.objectWikidata_URL,
+      objectID: each.objectID,
     };
   };
+  console.log(allData);
   return allData.map(callback);
 };
 
@@ -292,7 +294,9 @@ const renderObjectResults = function (objectData) {
       ${each.title}
     </div>
     <div class="view-btn-container">
-      <button class="view-object-btn button" id="">View More Info</button>
+      <button class="view-object-btn button" id="${JSON.stringify(
+        each.objectID
+      )}">View More Info</button>
     </div>
   </div>`;
   };
@@ -328,7 +332,6 @@ const handleData = async function (response) {
 
   const objectData = await getObjectData(allData);
   return objectData;
-  // console.log(objectData);
 };
 
 const questionKeyClick = async function (event) {
