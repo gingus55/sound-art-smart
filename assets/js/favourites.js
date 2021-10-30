@@ -41,7 +41,7 @@ const renderFavouriteCards = function (lsdata) {
       <div class="view-btn-container">
         <a href=${redirectLink} class="view-object-btn button" id="${JSON.stringify(
       each.objectID
-    )}">View More Info</a>
+    )}">View again...</a>
     </div>
     </div>`;
   };
