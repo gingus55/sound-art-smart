@@ -90,3 +90,24 @@ const renderMainSectionOfResults = function (objectData) {
 
   return mainResultsSectionHtml;
 };
+
+// construct the artist quote section
+renderArtistQuote = function (quoteData) {
+  const quoteBlockHtml = `<div class="has-text-centered" id="quote-box">
+  <blockquote>
+    <p class="is-size-3 is-italic mb-5">
+      “It is good to love many things, for therein lies the true strength,
+      and whosoever loves much performs much, and can accomplish much, and
+      what is done in love is well done.”
+    </p>
+    <p class="is-size-3">Vincent van Gogh</p>
+  </blockquote>
+</div>`;
+
+  return quoteBlockHtml;
+};
+
+// append all the object page to the body
+const appendAllObjectResultContentToBody = function () {
+  bodyContainer.append(renderMainSectionOfResults(), renderArtistQuote());
+};
