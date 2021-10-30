@@ -7,6 +7,11 @@
   --green: #4daa59;
 }
 
+* {
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
 #btn-container {
   display: flex;
   flex-direction: row;
@@ -19,4 +24,13 @@
   background-color: var(--coral);
   color: white;
   font-weight: 700;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10%;
+  margin-bottom: 20px;
+}
+
+#reset-btn:hover {
+  background-color: var(--btn-hover);
+  color: white;
 }
