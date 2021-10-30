@@ -12,19 +12,14 @@ const navbarMenu = function () {
 
 // ARRAYS FOR PAINTINGS AND SCULPTURES
 
-
 // CODE FOR QUESTION LOGIC
 // PAGE TARGETS
 const container = $("#question-container");
 const cardPlacer = $("#placer");
 
-
-
-
-
 // convert department to an ID for API call
 const convertKeywords = function (keywords) {
-  const userChoices = [...keywords]
+  const userChoices = [...keywords];
   if (keywords.includes("Egyptian Art")) {
     userChoices[3] = "10";
   } else if (keywords.includes("Greek and Roman Art")) {
@@ -35,8 +30,8 @@ const convertKeywords = function (keywords) {
     userChoices[3] = "17";
   } else if (keywords.includes("Modern Art")) {
     userChoices[3] = "21";
-  } 
-  return userChoices
+  }
+  return userChoices;
 };
 
 const buildTitle = function (title) {
@@ -159,7 +154,11 @@ const renderObjectResults = function (objectData) {
       <a href=${redirectLink} class="view-object-btn button" id="${JSON.stringify(
       each.objectID
     )}">View More Info</a>
-    <a class="view-object-btn button" id="save-btn">Save to favourites</a>
+    <a class="view-object-btn button" id="save-btn" data-objectId="${JSON.stringify(
+      each.objectID
+    )}" data-img="${each.imageUrl}" data-title="${
+      each.title
+    }" data-url="${redirectLink}">Save to favourites</a>
     </div>
   </div>`;
   };
@@ -248,14 +247,22 @@ const objectIdCardContainer = $("#object-cards-container");
 
 // View Object click handler function
 const handleViewObjectClick = function (event) {
-  
   const target = $(event.target);
   // console.log(target);
-  if (target.attr("id")=="save-btn") {
-    console.log("button clicked");
+  if (target.attr("id") == "save-btn") {
     // get data to save in LS
+    const favouriteObject = {
+      objectID: target.attr("data-objectId"),
+      imageUrl: target.attr("data-img"),
+      redirectLink: target.attr("data-url"),
+      title: target.attr("data-title"),
+    };
+    const favourites = getFromLocalStorage();
+    if (!favourites.includes(favouriteObject.objectID)) {
+      favourites.push(favouriteObject);
+      localStorage.setItem("object-data", JSON.stringify(favourites));
+    }
   }
-
 };
 
 // initialize LS
@@ -284,8 +291,6 @@ const onReady = function () {
 
   // NEED WORKING CLICK EVENT
   container.on("click", handleClick);
-
-  
 };
 
 $(document).ready(onReady);
