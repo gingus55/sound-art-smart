@@ -26,6 +26,7 @@ function getFromLocalStorage() {
 }
 
 const favouriteContainer = $("#favourite-container");
+const resetContainer = $("#btn-container");
 
 const renderFavouriteCards = function (lsdata) {
   favouriteContainer.empty();
@@ -51,6 +52,18 @@ const renderFavouriteCards = function (lsdata) {
   favouriteContainer.append(favouriteCardContainer);
 };
 
+const emptyLocalStorage = function () {
+  localStorage.setItem("object-data", JSON.stringify([]));
+};
+
+const handleReset = function (event) {
+  const target = $(event.target);
+  if (target.attr("id") == "reset-btn") {
+    favouriteContainer.empty();
+    emptyLocalStorage();
+  }
+};
+
 const onReady = function () {
   // call mobile navbar burger menu
   navbarMenu();
@@ -58,6 +71,8 @@ const onReady = function () {
   const lsdata = getFromLocalStorage();
 
   renderFavouriteCards(lsdata);
+
+  resetContainer.on("click", handleReset);
 };
 
 $(document).ready(onReady);
