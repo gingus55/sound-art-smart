@@ -167,6 +167,8 @@ const renderObjectResults = function (objectData) {
   const objectResultsContainer = `<section id="object-cards-container">${objectResultCards}</section>`;
 
   container.append(objectResultsContainer);
+  // click to view object info page
+  container.on("click", handleViewObjectClick);
 };
 
 const handleData = async function (response) {
@@ -246,11 +248,14 @@ const objectIdCardContainer = $("#object-cards-container");
 
 // View Object click handler function
 const handleViewObjectClick = function (event) {
+  
   const target = $(event.target);
-  if (target.is("button")) {
+  // console.log(target);
+  if (target.attr("id")=="save-btn") {
     console.log("button clicked");
+    // get data to save in LS
   }
-  console.log(target);
+
 };
 
 // initialize LS
@@ -280,8 +285,7 @@ const onReady = function () {
   // NEED WORKING CLICK EVENT
   container.on("click", handleClick);
 
-  // click to view object info page
-  objectIdCardContainer.on("click", handleViewObjectClick);
+  
 };
 
 $(document).ready(onReady);
