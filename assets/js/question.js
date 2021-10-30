@@ -286,7 +286,8 @@ const getObjectData = function (allData) {
 const renderObjectResults = function (objectData) {
   container.empty();
   const constructObjectResults = function (each) {
-    return `<div class="object-card animate__animated animate__zoomIn m-5">
+    const redirectLink = `./view-object-results.html?objectid=${each.objectID}`;
+    return `<div id="object-id-card-container" class="object-card animate__animated animate__zoomIn m-5">
     <div class="card-img">
       <img src="${each.imageUrl}" alt="" />
     </div>
@@ -294,9 +295,9 @@ const renderObjectResults = function (objectData) {
       ${each.title}
     </div>
     <div class="view-btn-container">
-      <button class="view-object-btn button" id="${JSON.stringify(
-        each.objectID
-      )}">View More Info</button>
+      <a href=${redirectLink} class="view-object-btn button" id="${JSON.stringify(
+      each.objectID
+    )}">View More Info</a>
     </div>
   </div>`;
   };
@@ -379,30 +380,46 @@ const constructSearchUrl = function (keyWords) {
   return myUrl;
 };
 
-// View Object
+const objectIdCardContainer = $("#object-cards-container");
+
+// View Object click handler function
+const handleViewObjectClick = function (event) {
+  const target = $(event.target);
+  if (target.is("button")) {
+    console.log("button clicked");
+  }
+  console.log(target);
+};
 
 // initialize LS
-
 function InitializeLocalStorage() {
-  const objectInfo = JSON.parse(localStorage.getItem("object"));
+  const objectInfo = JSON.parse(localStorage.getItem("object-data"));
   if (!objectInfo) {
-    return localStorage.setItem("object", JSON.stringify([]));
+    return localStorage.setItem("object-data", JSON.stringify([]));
   }
 }
 
 function getFromLocalStorage() {
-  const localStorageData = JSON.parse(localStorage.getItem("object"));
+  const localStorageData = JSON.parse(localStorage.getItem("object-data"));
   return localStorageData === null ? JSON.stringify([]) : localStorageData;
 }
 
 // DOCUMENT ONLOAD
 const onReady = function () {
+  // call mobile navbar burger menu
   navbarMenu();
+
+  // set local storage
   InitializeLocalStorage();
+
+  // get from local storage
   getFromLocalStorage();
 
   // NEED WORKING CLICK EVENT
   container.on("click", handleClick);
+
+  // click to view object info page
+  objectIdCardContainer.on("click", handleViewObjectClick);
 };
 
 $(document).ready(onReady);
