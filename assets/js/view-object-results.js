@@ -271,3 +271,14 @@ const renderAllAccordions = function (artWorkAccordion, userArray) {
   generateUserAccordion(userArray);
   handleAccordionFunctionality();
 };
+
+// document on load
+const onReady = function () {
+  navbarMenu();
+
+  appendAllObjectResultContentToBody();
+
+  renderAllAccordions(accordionContent, array);
+};
+
+$(document).ready(onReady);
