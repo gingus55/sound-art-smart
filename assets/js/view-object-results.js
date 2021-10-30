@@ -11,6 +11,8 @@ const navbarMenu = function () {
   burgerIcon.on("click", isActiveBurgerIcon);
 };
 
+console.log(keyWords);
+
 // store container of the results page in a variable to append into
 const bodyContainer = $("body");
 

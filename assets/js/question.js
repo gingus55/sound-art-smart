@@ -11,171 +11,33 @@ const navbarMenu = function () {
 };
 
 // ARRAYS FOR PAINTINGS AND SCULPTURES
-const paintingsArr = [
-  {
-    question: "Which do you prefer?",
-    cards: [
-      {
-        name: "People",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Places",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Animals",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-    ],
-  },
-  {
-    question: "Which medium do you like the look of?",
-    cards: [
-      {
-        name: "Oil",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Watercolour",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Tempera",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-    ],
-  },
-  {
-    question: "Which style do you fancy?",
-    cards: [
-      {
-        name: "Egyptian Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "10",
-      },
-      {
-        name: "Greek and Roman Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "13",
-      },
-      {
-        name: "Islamic Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "14",
-      },
-      {
-        name: "Medieval Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "17",
-      },
-      {
-        name: "Modern Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "21",
-      },
-    ],
-  },
-];
 
-const sculpturesArr = [
-  {
-    question: "Which do you prefer?",
-    cards: [
-      {
-        name: "People",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Places",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Animals",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-    ],
-  },
-  {
-    question: "Which medium do you like the look of?",
-    cards: [
-      {
-        name: "Clay",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Marble",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Metal",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-      {
-        name: "Gold",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      },
-    ],
-  },
-  {
-    question: "Which style do you fancy?",
-    cards: [
-      {
-        name: "Egyptian Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "10",
-      },
-      {
-        name: "Greek and Roman Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "13",
-      },
-      {
-        name: "Islamic Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "14",
-      },
-      {
-        name: "Medieval Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "17",
-      },
-      {
-        name: "Modern Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        deptId: "21",
-      },
-    ],
-  },
-];
 
 // CODE FOR QUESTION LOGIC
 // PAGE TARGETS
 const container = $("#question-container");
 const cardPlacer = $("#placer");
 
-// EMPTY ARRAY FOR KEYWORD STORAGE
-const keyWords = [];
 
-const storeKeyword = function (word) {
-  keyWords.push(word);
-  console.log(keyWords);
-};
+
+
 
 // convert department to an ID for API call
 const convertKeywords = function (keywords) {
+  const userChoices = [...keywords]
   if (keywords.includes("Egyptian Art")) {
-    keywords[3] = "10";
+    userChoices[3] = "10";
   } else if (keywords.includes("Greek and Roman Art")) {
-    keywords[3] = "13";
+    userChoices[3] = "13";
   } else if (keywords.includes("Islamic Art")) {
-    keywords[3] = "14";
+    userChoices[3] = "14";
   } else if (keywords.includes("Medieval Art")) {
-    keywords[3] = "17";
+    userChoices[3] = "17";
   } else if (keywords.includes("Modern Art")) {
-    keywords[3] = "21";
-  }
-  console.log(keywords);
+    userChoices[3] = "21";
+  } 
+  return userChoices
+  console.log(userChoices);
 };
 
 const buildTitle = function (title) {
@@ -351,8 +213,8 @@ const questionKeyClick = async function (event) {
     } else if (currentQuestionIndex === 3) {
       container.empty();
       container.append(`<p>Getting your results...</p>`);
-      convertKeywords(keyWords);
-      const url = constructSearchUrl(keyWords);
+      const keywords = convertKeywords(keyWords);
+      const url = constructSearchUrl(keywords);
       const data = await getDataFromApi(url);
       const objectData = await handleData(data);
       renderObjectResults(objectData);
