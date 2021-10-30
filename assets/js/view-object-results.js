@@ -197,3 +197,51 @@ const accordionContent = [
     info: `places painting are ..........`,
   },
 ];
+
+// construct a constant accordion box
+
+const renderConstantAccordion = function (artWorkAccordion) {
+  const accordionHtml = `<section class="accordions-container margin-adjustment">
+  <div class="accordions">
+    <div class="accordions-item">
+      <h2 class="accordions-title is-size-3">${artWorkAccordion[0].title}</h2>
+      <p class="accordions-answer is-size-5">${artWorkAccordion[0].info}</p>
+    </div>
+  </div>
+</section>`;
+
+  return bodyContainer.append(accordionHtml);
+};
+
+// construct a single accordion box
+const renderAccordion = function (accordionContentArray, userOption) {
+  // map through accordion content array
+
+  const findUserElement = function (each) {
+    if (each.title === userOption) {
+      const accordionHtml = `<section class="accordions-container margin-adjustment">
+        <div class="accordions">
+          <div class="accordions-item">
+            <h2 class="accordions-title is-size-3">${each.title}</h2>
+            <p class="accordions-answer is-size-5">${each.info}</p>
+          </div>
+        </div>
+      </section>`;
+
+      return bodyContainer.append(accordionHtml);
+    }
+  };
+
+  return accordionContentArray.forEach(findUserElement);
+};
+
+//construct accordion for selected catogories by user
+const generateUserAccordion = function (userArray) {
+  // loop through the chosen user catogary array and generate an accordion for each one
+
+  const fullAccordion = function (each) {
+    return renderAccordion(accordionContent, each);
+  };
+
+  return userArray.forEach(fullAccordion);
+};
