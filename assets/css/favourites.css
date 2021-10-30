@@ -1,0 +1,22 @@
+:root {
+  --aqua: #a9c7c3;
+  --turquoise: #4d6663;
+  --coral: #e07069;
+  --btn-hover: #e2554b;
+  --ivory: #f1efe8;
+  --green: #4daa59;
+}
+
+#btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+#reset-btn {
+  margin: auto;
+  background-color: var(--coral);
+  color: white;
+  font-weight: 700;
+}

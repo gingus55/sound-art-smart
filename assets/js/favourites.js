@@ -42,6 +42,7 @@ const renderFavouriteCards = function (lsdata) {
         <a href=${redirectLink} class="view-object-btn button" id="${JSON.stringify(
       each.objectID
     )}">View More Info</a>
+    </div>
     </div>`;
   };
   const favouriteCards = lsdata.map(constructFavouriteCards).join("");
