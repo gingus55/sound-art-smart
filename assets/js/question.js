@@ -258,7 +258,10 @@ const handleViewObjectClick = function (event) {
       title: target.attr("data-title"),
     };
     const favourites = getFromLocalStorage();
-    if (!favourites.includes(favouriteObject.objectID)) {
+    var index = favourites.findIndex(
+      (x) => x.objectID == favouriteObject.objectID
+    );
+    if (index === -1) {
       favourites.push(favouriteObject);
       localStorage.setItem("object-data", JSON.stringify(favourites));
     }
