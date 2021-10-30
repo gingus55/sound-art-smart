@@ -12,3 +12,10 @@ const navbarMenu = function () {
 
   burgerIcon.on("click", isActiveBurgerIcon);
 };
+
+const onReady = function () {
+  // call mobile navbar burger menu
+  navbarMenu();
+};
+
+$(document).ready(onReady);
