@@ -92,3 +92,42 @@ body {
   box-shadow: 3px 3px 3px #d4d4d4;
   background-color: rgba(255, 255, 240, 0.74);
 }
+
+/* Further Info About the Art Work accordion*/
+
+.accordions-container {
+  background-color: ;
+}
+
+.accordions {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.accordions-item {
+  padding: 20px;
+  margin-bottom: 0;
+  background-color: white;
+}
+
+.accordions-title {
+  display: flex;
+  cursor: pointer;
+}
+
+.accordions-title::after {
+  content: "+";
+  font-size: 40px;
+  margin-left: auto;
+}
+
+.active-headers::after {
+  content: "-";
+}
+
+.accordions-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1000ms ease max-height;
+}
