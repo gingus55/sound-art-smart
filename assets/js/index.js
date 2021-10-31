@@ -7,3 +7,5 @@ const activateBurgerMenu = function () {
 };
 
 $(burgerMenu).click(activateBurgerMenu);
+
+// Quote of the day
