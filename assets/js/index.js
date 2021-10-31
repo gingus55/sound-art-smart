@@ -1,6 +1,5 @@
 const burgerMenu = $("#burger");
 const navbarMenu = $("#nav-links");
-// target quote container
 const quoteContainer = $("#landing-quote-container");
 
 // set API URL
@@ -23,6 +22,15 @@ const getQuoteOfTheDayContents = function (quoteOfTheDayResult) {
   };
 };
 
+// render quote of the day
+const renderQuoteOfTheDay = function (quoteOfTheDayData) {
+  const quoteOfTheDay = `<h2 class="subtitle is-4 has-text-centered" id="landing-quote">
+  "${quoteOfTheDayData.quote}" ~${quoteOfTheDayData.author}
+</h2>`;
+
+  quoteContainer.append(quoteOfTheDay);
+};
+
 // Quote of the day API call
 const getQuoteOfTheDayData = async function () {
   const quoteOfTheDayResponse = await fetch(quoteOfTheDayUrl);
@@ -30,7 +38,9 @@ const getQuoteOfTheDayData = async function () {
 
   const quoteOfTheDayData = getQuoteOfTheDayContents(quoteOfTheDayResult);
 
-  // console.log(quoteOfTheDayResult);
+  console.log(quoteOfTheDayData);
+  // return quoteOfTheDayData;
+  renderQuoteOfTheDay(quoteOfTheDayData);
 };
 
 const onReady = function () {
