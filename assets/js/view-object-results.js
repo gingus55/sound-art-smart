@@ -17,6 +17,7 @@ const mainContainer = $(".main-container");
 const quoteContainer = $("#quote-box");
 const accordionContainer = $(".accordions-container");
 
+// convert data
 const getObjectData = function (dataInfo) {
   const objectData = {
     title: dataInfo.title,
@@ -77,14 +78,18 @@ const renderMainSectionOfResults = function (objectData) {
             <div class="is-size-6 pl-5">
               <ul>
                 <li>
-                  <span class="has-text-weight-bold">Object Name:</span> ${objectData.name}
+                  <span class="has-text-weight-bold">Art Work Name:</span> ${objectData.name}
                 </li>
 
                 <li>
-                  <span class="has-text-weight-bold">Artist:</span> ${objectData.artistName} (${objectData.artistBio})
+                  <span class="has-text-weight-bold">Artist:</span> ${objectData.artistName} ${objectData.artistBio}
                 </li>
 
-                <li><span class="has-text-weight-bold">Date:</span> ${objectData.data}</li>
+                <li>
+                <span class="has-text-weight-bold">Artist Bio:</span> ${objectData.artistBio}
+              </li>
+
+                <li><span class="has-text-weight-bold">Date:</span> ${objectData.date}</li>
 
                 <li>
                   <span class="has-text-weight-bold">Medium:</span> ${objectData.medium}
@@ -156,6 +161,8 @@ const makeObjectCall = async function () {
 
   const data = await apiRequest(url);
 
+  console.log(data);
+
   const dataFromObject = getObjectData(data);
 
   appendAllObjectResultContentToBody(dataFromObject);
@@ -171,21 +178,14 @@ const renderRandomArtFact = function () {
     "The Mona Lisa has her own mailbox in the Louvre because of all the love letters she receives:Over the years many have fallen prey to the portrait’s ‘limpid and burning eyes’, leaving her offerings of flowers, poems and, yes, love notes. Artist Luc Maspero allegedly took this fervour to a new high – and then low – in 1852, diving off a hotel balcony because “For years I have grappled desperately with her smile. I prefer to die.” Who knew art appreciation could be so dark?",
     "The colour wheel predates the United States: Considering the US is one of the oldest modern democracies, this is pretty amazing. Sir Isaac Newton invented the colour wheel in 1706 by refracting white sunlight into its six colours. The realisation that light alone was responsible for colour was radical, and the wheel proved especially useful for artists, who could now easily observe the most effective colour complementation.",
     "In 2003 street artist Banksy stuck his own work to the wall in the Tate Modern Museum: The prank was soon undone by its inadequate glue, but for a few hours Crimewatch UK Has Ruined the Countryside For All of Us was hung in one of the world’s most famous museums. It also inspired Andrzej Sobiepan, a Polish art student, to a similar feat in 2005, where for three days he successfully passed off his work as part of the National Museum’s collection.",
+    "landscape painting, the depiction of natural scenery in art. Landscape paintings may capture mountains, valleys, bodies of water, fields, forests, and coasts and may or may not include man-made structures as well as people. Although paintings from the earliest ancient and Classical periods included natural scenic elements, landscape as an independent genre did not emerge in the Western tradition until the Renaissance in the 16th century. In the Eastern tradition, the genre can be traced back to 4th-century-CE China.",
+    "Abstract art is modern art which does not represent images of our everyday world. It has colour, lines and shapes (form), but they are not intended to represent objects or living things. Often the artists were influenced by ideas and philosophies of abstraction. Abstract art is found in painting and in sculpture. There are also many works of art which are partly abstract, and partly representational. And there are many artists who work in abstract and other types of modern art.Purely abstract art is a 20th-century invention. It grew out of the earlier forms of modern art, but it is perhaps the one movement which is absolutely modern. It has no roots in earlier art (as we use the term today).",
   ];
 
   const randomFacts = Math.floor(Math.random() * factsOfArt.length);
 
   return factsOfArt[randomFacts];
 };
-
-const array = [
-  `painting`,
-  `landscape`,
-  "portrait",
-  "abstract",
-  "animals",
-  "sculptures",
-];
 
 // store the content of the accordion in a array
 const accordionContent = [
@@ -198,27 +198,39 @@ const accordionContent = [
     info: "People have been painting for as long as 30,000 years! Early Cave paintings were drawn with red or yellow ochre, hematite, manganese oxide, and charcoal may have been made by early Homo sapiens as long as 30,000 years ago. These would have been ground to make up a primitive paint substance.  Other ingredients used were animal blood and fat. ",
   },
   {
-    title: "landscape",
-    info: "landscape painting, the depiction of natural scenery in art. Landscape paintings may capture mountains, valleys, bodies of water, fields, forests, and coasts and may or may not include man-made structures as well as people. Although paintings from the earliest ancient and Classical periods included natural scenic elements, landscape as an independent genre did not emerge in the Western tradition until the Renaissance in the 16th century. In the Eastern tradition, the genre can be traced back to 4th-century-CE China.",
-  },
-  {
-    title: "portrait",
-    info: "Portraits Which Hold a Secret: The history of portrait painting is full of masterpieces where their creators chose to hide a secret message, a figure, or even a portrait of themselves in their creations. The secret of oil painting ‘Mona Lisa’, in which scientists have discovered a microscopic ‘LV’ (initials of Leonardo da Vinci, the creator) written on the left eye of the lady! Similarly, the hidden story of oil painting in the famous portrait Bacchus by Caravaggio, is the artist’s portrait painted inside the glass of vine. Well, Genius is the word!",
-  },
-  {
-    title: "abstract",
-    info: "Abstract art is modern art which does not represent images of our everyday world. It has colour, lines and shapes (form), but they are not intended to represent objects or living things. Often the artists were influenced by ideas and philosophies of abstraction. Abstract art is found in painting and in sculpture. There are also many works of art which are partly abstract, and partly representational. And there are many artists who work in abstract and other types of modern art.Purely abstract art is a 20th-century invention. It grew out of the earlier forms of modern art, but it is perhaps the one movement which is absolutely modern. It has no roots in earlier art (as we use the term today).",
-  },
-  {
-    title: "animals",
+    title: "Animals",
     info: "Animals have been a source of inspiration for many artists. From art about rural life and growth, to myths and legends, animals are used in art in many different ways. Art can help us explore our relationship to wildlife and can help us think about how we care for animals and the environment. When it comes to animals, exploring habitats is one of the central themes for artists. With a world of textures, colours and shapes to explore, nature is an exciting feature in many artworks. Animals in artworks can make us consider our own relationship to nature. How do we treat wildlife and its environment? Are there some animals we look after more than others?",
   },
   {
-    title: `people`,
+    title: "Oil",
     info: `abstract painting are ..........`,
   },
   {
-    title: `places`,
+    title: "Watercolour",
+    info: `places painting are ..........`,
+  },
+  {
+    title: "Tempera",
+    info: `places painting are ..........`,
+  },
+  {
+    title: "Egyptian Art",
+    info: `places painting are ..........`,
+  },
+  {
+    title: "Greek and Roman Art",
+    info: `places painting are ..........`,
+  },
+  {
+    title: "Islamic Art",
+    info: `places painting are ..........`,
+  },
+  {
+    title: "Medieval Art",
+    info: `places painting are ..........`,
+  },
+  {
+    title: "Modern Art",
     info: `places painting are ..........`,
   },
   {
@@ -226,23 +238,19 @@ const accordionContent = [
     info: "Artist Willard Wigan once inhaled his own work: What’s that, you say? He inhaled a painting?? The man must be enormous! Not quite. Wigan’s works are ‘micro-sculptures’, so tiny they must be viewed through a microscope. In creating his art, Wigan has to slow his heartbeat and work between pulses. The work he inhaled was Alice, from Alice in Wonderland, but apparently she was even better when remade.",
   },
   {
-    title: "object",
+    title: "Metal",
     info: `places painting are ..........`,
   },
   {
-    title: "gold",
+    title: "Gold",
     info: `places painting are ..........`,
   },
   {
-    title: "marble",
+    title: "Marble",
     info: `places painting are ..........`,
   },
   {
-    title: "wood",
-    info: `places painting are ..........`,
-  },
-  {
-    title: "clay",
+    title: "Clay",
     info: `places painting are ..........`,
   },
 ];
@@ -277,7 +285,7 @@ const renderAccordion = function (accordionContentArray, userOption) {
         </div>
       </section>`;
 
-      return bodyContainer.append(accordionHtml);
+      return accordionContainer.append(accordionHtml);
     }
   };
 
@@ -324,6 +332,8 @@ const renderAllAccordions = function (artWorkAccordion, userArray) {
 const handleResponse = function (response) {
   return response.json();
 };
+
+const array = ["painting", "Places", "Tempera", "Egyptian Art"];
 
 // document on load
 const onReady = function () {
