@@ -13,6 +13,9 @@ const navbarMenu = function () {
 
 // store container of the results page in a variable to append into
 const bodyContainer = $("body");
+const mainContainer = $(".main-container");
+const quoteContainer = $("#quote-box");
+const accordionContainer = $(".accordions-container");
 
 const getObjectData = function (dataInfo) {
   const objectData = {
@@ -138,11 +141,24 @@ renderArtistQuote = function (quoteData) {
 };
 
 // append all the object page to the body
-const appendAllObjectResultContentToBody = function (objectData) {
-  bodyContainer.append(
+const appendAllObjectResultContentToBody = function (objectData, quoteData) {
+  mainContainer.append(
     renderMainSectionOfResults(objectData),
-    renderArtistQuote()
+    renderArtistQuote(quoteData)
   );
+};
+
+// Make Api call for object data
+
+const makeObjectCall = async function () {
+  const urlObjectId = new URL(window.location).search.split("=")[1];
+  const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${urlObjectId}`;
+
+  const data = await apiRequest(url);
+
+  const dataFromObject = getObjectData(data);
+
+  appendAllObjectResultContentToBody(dataFromObject);
 };
 
 // construct accordion
@@ -243,7 +259,7 @@ const renderConstantAccordion = function (artWorkAccordion) {
   </div>
 </section>`;
 
-  return bodyContainer.append(accordionHtml);
+  return accordionContainer.append(accordionHtml);
 };
 
 // construct a single accordion box
@@ -307,21 +323,6 @@ const renderAllAccordions = function (artWorkAccordion, userArray) {
 
 const handleResponse = function (response) {
   return response.json();
-};
-
-// Make Api call
-const makeObjectCall = async function () {
-  const urlObjectId = new URL(window.location).search.split("=")[1];
-  const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${urlObjectId}`;
-
-  const data = await apiRequest(url);
-
-  const dataFromObject = getObjectData(data);
-
-  appendAllObjectResultContentToBody(dataFromObject);
-
-  return data;
-  // fetch(url).then(handleResponse).then(handleData);
 };
 
 // document on load
