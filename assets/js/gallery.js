@@ -17,58 +17,68 @@
   var _imageLibrary = [
       {
         id: 01,
-        image: "assets/images/paint/p-animals/p-animals-oil.jpeg",
+        image:
+          "/Users/jonathanjefferies/sound-art-smart/assets/images/paint/p-animals/p-animals-oil.jpeg",
         title: "p-animals-oil",
       },
       {
         id: 02,
-        image: "./assets/images/paint/p-animals/p-animals-tempera.jpeg",
+        image:
+          "./Users/jonathanjefferies/sound-art-smart/assets/images/paint/p-animals/p-animals-tempera.jpeg",
         title: "p-animals-tempera",
       },
       {
         id: 03,
-        image: "./assets/images/paint/p-animals/p-animals-water.jpeg",
+        image:
+          "./Users/jonathanjefferies/sound-art-smart/assets/images/paint/p-animals/p-animals-water.jpeg",
         title: "p-animals-water",
       },
       {
         id: 04,
-        image: "./assets/images/paint/p-landscape/p-landscape-oil.jpeg",
+        image:
+          "./Users/jonathanjefferies/sound-art-smart/assets/images/paint/p-landscape/p-landscape-oil.jpeg",
         title: "p-landscape-oil",
       },
       {
         id: 05,
-        image: "./assets/images/paint/p-landscape/p-landscape-tempera.jpeg",
+        image:
+          "./Users/jonathanjefferies/sound-art-smart/assets/images/paint/p-landscape/p-landscape-tempera.jpeg",
         title: "p-landscape-tempera",
       },
       {
         id: 06,
-        image: "./assets/images/paint/p-landscape/p-landscape-water.jpeg",
+        image:
+          "./Users/jonathanjefferies/sound-art-smart/assets/images/paint/p-landscape/p-landscape-water.jpeg",
         title: "p-landscape-water",
       },
       {
         id: 07,
-        image: "./assets/images/paint/p-people/p-people-tempera.jpeg",
+        image:
+          "./Users/jonathanjefferies/sound-art-smart/assets/images/paint/p-people/p-people-tempera.jpeg",
         title: "p-people-tempera",
       },
       {
         id: 08,
         image:
-          "./get-art-smart/assets/images/paint/p-people/p-people-water.jpeg",
+          "./Users/jonathanjefferies/sound-art-smart/get-art-smart/assets/images/paint/p-people/p-people-water.jpeg",
         title: "p-people-water",
       },
       {
         id: 09,
-        image: "./assets/images/paint/p-people/p-portrait-oil.jpeg",
+        image:
+          "./Users/jonathanjefferies/sound-art-smart/assets/images/paint/p-people/p-portrait-oil.jpeg",
         title: "p-portrait-oil",
       },
       {
         id: 10,
-        image: "./assets/images/sculpture/s-animals/s-animals-clay.jpeg",
+        image:
+          "./Users/jonathanjefferies/sound-art-smart/assets/images/sculpture/s-animals/s-animals-clay.jpeg",
         title: "s-animals-clay",
       },
       {
         id: 11,
-        image: "./assets/images/sculpture/s-animals/s-animals-gold.jpeg",
+        image:
+          "./Users/jonathanjefferies/sound-art-smart/assets/images/sculpture/s-animals/s-animals-gold.jpeg",
         title: "s-animals-gold",
       },
       {
