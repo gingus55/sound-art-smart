@@ -24,6 +24,10 @@ body {
   background-color: var(--ivory);
 }
 
+h1 {
+  text-align: center;
+}
+
 .header {
   min-height: 5vh;
 }
