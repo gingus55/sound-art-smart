@@ -52,7 +52,8 @@
       },
       {
         id: 08,
-        image: "./assets/images/paint/p-people/p-people-water.jpeg",
+        image:
+          "./get-art-smart/assets/images/paint/p-people/p-people-water.jpeg",
         title: "p-people-water",
       },
       {
