@@ -133,6 +133,8 @@ body {
 .view-btn-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
 /* Adjust background image responsiveness */
