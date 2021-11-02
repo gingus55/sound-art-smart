@@ -58,9 +58,9 @@ const buildCards = function (cards) {
     const answerCard = `<div class="paint-card animate__animated animate__zoomIn m-5" id="${element.name}" name="question-card">
       <div class="card-img" id="${element.name}" name="question-card">
         <img
-          src="${element.img}”
+          src=${element.img}
           alt=“"
-          alt="" id="${element.name}"
+          id="${element.name}"
           name="question-card"
         />
       </div>
