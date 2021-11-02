@@ -12,19 +12,14 @@ const navbarMenu = function () {
 
 // ARRAYS FOR PAINTINGS AND SCULPTURES
 
-
 // CODE FOR QUESTION LOGIC
 // PAGE TARGETS
 const container = $("#question-container");
 const cardPlacer = $("#placer");
 
-
-
-
-
 // convert department to an ID for API call
 const convertKeywords = function (keywords) {
-  const userChoices = [...keywords]
+  const userChoices = [...keywords];
   if (keywords.includes("Egyptian Art")) {
     userChoices[3] = "10";
   } else if (keywords.includes("Greek and Roman Art")) {
@@ -35,8 +30,8 @@ const convertKeywords = function (keywords) {
     userChoices[3] = "17";
   } else if (keywords.includes("Modern Art")) {
     userChoices[3] = "21";
-  } 
-  return userChoices
+  }
+  return userChoices;
   console.log(userChoices);
 };
 
@@ -64,9 +59,9 @@ const buildCards = function (cards) {
     const answerCard = `<div class="paint-card animate__animated animate__zoomIn m-5" id="${element.name}" name="question-card">
       <div class="card-img" id="${element.name}" name="question-card">
         <img
-          src="${element.img}”
+          src=${element.img}
           alt=“"
-          alt="" id="${element.name}"
+          id="${element.name}"
           name="question-card"
         />
       </div>
