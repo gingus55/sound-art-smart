@@ -161,47 +161,23 @@
     color: #e07069;
   }
 
-  .chris:hover + .hidechris {
-    display: block;
-    color: red;
-  }
+/* CSS for large info container */
 
-  .kayle:hover + .hidekayle {
-    display: block;
-    color: red;
-  }
-  .jonathan:hover + .hidejonathan {
-    display: block;
-    color: red;
-  }
-  .elizabeth:hover + .hideelizabeth {
-    display: block;
-    color: red;
-  }
-  .dahir:hover + .hidedahir {
-    display: block;
-    color: red;
-  }
+.info-container{
 
-  .hidechris + .info-container {
-    display: none;
-  }
+}
 
-  .hidekayle {
-    display: none;
-  }
+.image{
 
-  .hidejonathan {
-    display: none;
-  }
+}
 
-  .hideelizabeth {
-    display: none;
-  }
+.status{
 
-  .hidedahir {
-    display: none;
-  }
+}
+
+.about{
+
+}
 
   .text-style {
     font-size: 32px;
