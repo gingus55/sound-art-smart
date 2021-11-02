@@ -4,15 +4,15 @@ const paintingsArr = [
     cards: [
       {
         name: "People",
-        img: "./assets/images/paint/p-people/p-people-water.jpeg",
+        img: "./assets/images/paint/p-people.jpeg",
       },
       {
         name: "Places",
-        img: "./assets/images/paint/p-landscape/p-landscape-water.jpeg",
+        img: "./assets/images/paint/p-places.jpeg",
       },
       {
         name: "Animals",
-        img: "./assets/images/paint/p-animals/p-animals-oil.jpeg",
+        img: "./assets/images/paint/p-animals.jpeg",
       },
     ],
   },
@@ -21,15 +21,15 @@ const paintingsArr = [
     cards: [
       {
         name: "Oil",
-        img: "./assets/images/paint/p-landscape/p-landscape-oil.jpeg",
+        img: "./assets/images/paint/p-oil.jpeg",
       },
       {
         name: "Watercolour",
-        img: "./assets/images/paint/p-landscape/p-watercolor.jpg",
+        img: "./assets/images/paint/p-watercolor.jpg",
       },
       {
         name: "Tempera",
-        img: "./assets/images/paint/p-animals/p-animals-tempera.png",
+        img: "./assets/images/paint/p-tempera.png",
       },
     ],
   },
