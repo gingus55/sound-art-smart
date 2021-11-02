@@ -122,6 +122,92 @@ body {
   max-height: 100px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+.dd-vc {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dd-transition {
+  transition: all 0.3s ease;
+}
+
+.dd-shadow {
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+#dragDrop {
+  width: 1000px;
+  margin: 20px auto 0;
+  position: relative;
+}
+
+.dd-slot {
+  float: left;
+  outline: 2px dashed rgba(54, 86, 132, 0.75);
+  outline-offset: -15px;
+  position: relative;
+  pointer-events: none;
+}
+
+.dd-slot-num {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 40px;
+  position: absolute;
+  width: 100%;
+}
+
+.dd-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dd-item.dd-disabled {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.dd-item.dd-selected {
+  z-index: 20;
+}
+
+.dd-item-inner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dd-item-panel {
+  width: 80%;
+  height: 35px;
+  background: #fff;
+  position: absolute;
+  left: 10%;
+  bottom: -15px;
+  z-index: 5;
+}
+
+.dd-item-title {
+  font-size: 15px;
+  color: #365684;
+  text-align: center;
+  line-height: 35px;
+}
+
 @media screen and (max-width: 576px) {
   .nav-container {
     flex-direction: row;
