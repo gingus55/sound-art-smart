@@ -53,7 +53,6 @@ body {
 /* LANDING Page Styles */
 .main {
   display: flex;
-  min-height: 95vh;
 }
 
 #introduction {
@@ -65,13 +64,15 @@ body {
   border-radius: 4px;
 }
 
-.title {
-  padding-bottom: 10px;
+#landing-quote-container {
+  padding-bottom: 20px;
 }
 
 #landing-quote {
   font-family: "Bad Script", sans-serif;
   font-weight: 700;
+  line-height: 1.5;
+  color: var(--btn-hover);
 }
 
 .landing-description {
@@ -132,6 +133,8 @@ body {
 .view-btn-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
 /* Adjust background image responsiveness */
