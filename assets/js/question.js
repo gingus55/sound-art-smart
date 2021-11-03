@@ -145,7 +145,7 @@ const renderObjectResults = function (objectData) {
     const redirectLink = `./view-object-results.html?objectid=${each.objectID}`;
     return `<div id="object-id-card-container" class="object-card animate__animated animate__zoomIn m-5">
     <div class="card-img">
-      <img src="${each.imageUrl}" alt="" />
+      <img class="search-img" src="${each.imageUrl}" alt="" />
     </div>
     <div class="card-header-title has-text-centered is-size-5 is-italic">
       ${each.title}
@@ -153,12 +153,12 @@ const renderObjectResults = function (objectData) {
     <div class="view-btn-container">
       <a href=${redirectLink} class="view-object-btn button" id="${JSON.stringify(
       each.objectID
-    )}">View More Info</a>
+    )}">View</a>
     <a class="view-object-btn button" id="save-btn" data-objectId="${JSON.stringify(
       each.objectID
     )}" data-img="${each.imageUrl}" data-title="${
       each.title
-    }" data-url="${redirectLink}">Save to favourites</a>
+    }" data-url="${redirectLink}">Save</a>
     </div>
   </div>`;
   };
@@ -176,6 +176,12 @@ const handleData = async function (response) {
   // generate array of 6 objects
 
   // Shuffle array
+  if (objArray === null) {
+    container.empty();
+    const errorMessage = `<h2 id="bad-search">You clearly know nothing about Art. Try again later...</h2>`;
+    container.append(errorMessage);
+  }
+
   const shuffled = objArray.sort(() => 0.5 - Math.random());
 
   // Get sub-array of first 6 elements after shuffled
@@ -195,7 +201,12 @@ const handleData = async function (response) {
   console.log(allData);
 
   const objectData = await getObjectData(allData);
+  
   return objectData;
+};
+
+const pushToLocal = function (array) {
+  localStorage.setItem("user-choice", JSON.stringify(array));
 };
 
 const questionKeyClick = async function (event) {
@@ -214,6 +225,7 @@ const questionKeyClick = async function (event) {
     } else if (currentQuestionIndex === 3) {
       container.empty();
       container.append(`<p>Getting your results...</p>`);
+      pushToLocal(keyWords);
       const keywords = convertKeywords(keyWords);
       const url = constructSearchUrl(keywords);
       const data = await getDataFromApi(url);
