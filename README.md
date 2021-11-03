@@ -1,29 +1,83 @@
-# sound-art-smart
-Project 1 
+# Sound Art Smart
 
+A quick visual questionnaire to discover artworks based on your interests.
 
------USER STORY-----
+Sound Art Smart guides the user through a short series of image-based selections in order to present a random assortment of up to 6 artworks matching their specified interests. The user can then learn more by viewing the artwork information pages which include the work's title, artist, date, medium and much more. Should the user want to come back later, they can save their favourite artworks. As an added bonus, users can view their favourites in a styled gallery page--a one-of-a-kind exhibit all their own!
 
--As a user with no knowledge of art I arrive at the landing page of sound-art-smart
+## User Story
 
--I am greeted with the message not to worry on the landing page and in a few simple steps they’ll have me covered.
+AS someone without any art knowledge  
+I WANT to find information about artworks that interest me  
+SO THAT I can enjoy learning more and talking about them
 
--When I click to start my journey, I am prompted with some choice questions to decide which things pique my interest
+GIVEN an art questionnaire application  
+WHEN I arrive at the webpage  
+THEN I am presented with an introduction to the Sound Art Smart application and a navigation bar linking to each application feature
 
--Once I have made some selections I am presented with artists and their work which I may be interested in
+WHEN I view the introduction  
+THEN I am presented with an art quote of the day and a description of the application
 
--When clicking on a suggestion I am given further information about the artist including a few key facts I should try to remember for conversation 
+WHEN I click the "Get Started" button  
+THEN I am presented with a selection of image cards
 
--When viewing the art itself I am given some details surrounding its features I am interested in
+WHEN I click the image that interests me the most  
+THEN I am presented with a new set of image cards from which to select my preference
 
--I am given the key words used to describe the styles I am interested in
+WHEN I've made all preference selections  
+THEN I am presented with up to 6 artwork cards based on my selections
 
--I am presented with quotes by famous individuals which relate to the artist or piece I am looking at
+WHEN I view an artwork card  
+THEN I am presented with the artwork's image and title and buttons to "View" and "Save"
 
--I have an option to save my result for future reference
+WHEN I click the "View" button  
+THEN I am presented a page containing further information about the artwork including artist, date, and medium as well as general information about the topic selections I've made (i.e. animals in art)
 
--a nav bar allows me to retake the initial assessment should my tastes change 
+WHEN I click "Save" on the artwork results page  
+THEN the artwork is saved to my Favourites
 
--should I want to delve even further into a particular piece/style or artist I am provided a link to go and further my research
+WHEN I click "Favourites" in the navigation bar  
+THEN I am presented a page with all of my favourite artworks
 
--I am interested to know more about the people who developed this site and there is a convenient ‘About Us’ on the navbar
+WHEN I click the "View Again" button on an artwork card  
+THEN I am again presented with the detailed information on the artwork
+
+WHEN I click the "Reset Favourites" button  
+THEN the favourites page is cleared of all artworks
+
+<!-- WHEN I click "Gallery in the navigation bar"
+THEN
+
+WHEN I click "About Us" in the navigation bar
+THEN I am presented with information cards for each application developer
+
+WHEN I click a team member's image
+THEN I am presented with additional information about that person including -->
+
+## Built With
+
+- CSS & Bulma CSS framework
+- HTML
+- Javascript & jQuery
+- Google Fonts
+- [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/)
+- [They Said So Quotes API](https://quotes.rest/)
+
+## Deployed Application
+
+<!-- [GitHub Pages]() -->
+
+## Screenshots
+
+Index page
+![Sound Art Smart index page](./assets/images/screenshots/index-page.png)
+
+Questionnaire sample page
+![Questionnaire page](./assets/images/screenshots/question-medium.png)
+
+Results page
+![Results page](./assets/images/screenshots/results.png)
+
+Favourites page
+![Favourites page](./assets/images/screenshots/favourites.png)
+
+<!-- ![Gallery page]() -->
