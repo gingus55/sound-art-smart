@@ -1,7 +1,7 @@
 (function () {
   var _doc = window.document;
 
-  var _numOfImageSlots = 21,
+  var _numOfImageSlots = 20,
     _numOfImagesPerRow = 4,
     _imageMarginBottom = 30;
 
