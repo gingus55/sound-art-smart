@@ -198,6 +198,10 @@ const handleData = async function (response) {
   return objectData;
 };
 
+const pushToLocal = function (array) {
+  localStorage.setItem("user-choice", JSON.stringify(array));
+};
+
 const questionKeyClick = async function (event) {
   const target = $(event.target);
   const currentTarget = $(event.currentTarget);
@@ -214,6 +218,7 @@ const questionKeyClick = async function (event) {
     } else if (currentQuestionIndex === 3) {
       container.empty();
       container.append(`<p>Getting your results...</p>`);
+      pushToLocal(keyWords);
       const keywords = convertKeywords(keyWords);
       const url = constructSearchUrl(keywords);
       const data = await getDataFromApi(url);
