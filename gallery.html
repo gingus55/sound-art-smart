@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Gallery</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar has-shadow" id="nav-bar-bg">
+          <div class="navbar-brand">
+            <a href="" class="navbar-item py-2 px-2">
+              <img
+                src="./assets/images/saslogo.png"
+                alt="logo"
+                id="navbar-logo"
+              />
+            </a>
+  
+            <div class="navbar-burger" id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+  
+          <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+              <a href="" class="navbar-item is-size-5">Home</a>
+              <a href="" class="navbar-item is-size-5">Get Started</a>
+              <a href="./favourites.html" class="navbar-item is-size-5"
+                >Favourites</a
+              >
+              <a href="./gallery.html" class="navbar-item is-size-5">Gallery</a>
+              <a href="" class="navbar-item is-size-5">About Us</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <main>
+      <section id="containment-wrapper">
+        
+        <!-- <div id="draggable3" class="draggable ui-widget-content">
+          <img src="./download.jpg" />
+        </div> -->
+        
+      </section>
+      <div id="draggable" class="draggable ui-widget-content">
+        <p>I can be dragged only vertically</p>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    
+          
+    <script src="./assets/js/shared-script.js"></script>
+
+    <script src="./assets/js/gallery.js"></script>
+  </body>
+</html>
