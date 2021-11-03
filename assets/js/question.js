@@ -145,7 +145,7 @@ const renderObjectResults = function (objectData) {
     const redirectLink = `./view-object-results.html?objectid=${each.objectID}`;
     return `<div id="object-id-card-container" class="object-card animate__animated animate__zoomIn m-5">
     <div class="card-img">
-      <img src="${each.imageUrl}" alt="" />
+      <img class="search-img" src="${each.imageUrl}" alt="" />
     </div>
     <div class="card-header-title has-text-centered is-size-5 is-italic">
       ${each.title}
@@ -153,12 +153,12 @@ const renderObjectResults = function (objectData) {
     <div class="view-btn-container">
       <a href=${redirectLink} class="view-object-btn button" id="${JSON.stringify(
       each.objectID
-    )}">View More Info</a>
+    )}">View</a>
     <a class="view-object-btn button" id="save-btn" data-objectId="${JSON.stringify(
       each.objectID
     )}" data-img="${each.imageUrl}" data-title="${
       each.title
-    }" data-url="${redirectLink}">Save to favourites</a>
+    }" data-url="${redirectLink}">Save</a>
     </div>
   </div>`;
   };
