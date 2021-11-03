@@ -176,6 +176,12 @@ const handleData = async function (response) {
   // generate array of 6 objects
 
   // Shuffle array
+  if (objArray === null) {
+    container.empty();
+    const errorMessage = `<h2 id="bad-search">You clearly know nothing about Art. Try again later...</h2>`;
+    container.append(errorMessage);
+  }
+
   const shuffled = objArray.sort(() => 0.5 - Math.random());
 
   // Get sub-array of first 6 elements after shuffled
@@ -195,6 +201,7 @@ const handleData = async function (response) {
   console.log(allData);
 
   const objectData = await getObjectData(allData);
+  
   return objectData;
 };
 

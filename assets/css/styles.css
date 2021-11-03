@@ -96,6 +96,11 @@ body {
   color: white;
 }
 
+#bad-search{
+  font-size: 100px;
+  color: #e2554b;
+}
+
 /* CARDS Styles */
 .paint-card,
 .object-card {
