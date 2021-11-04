@@ -1,3 +1,17 @@
+const navbarMenu = function () {
+  const burgerIcon = $("#burger");
+  const navbarMenu = $("#nav-links");
+
+  const isActiveBurgerIcon = function () {
+    navbarMenu.toggle("is-active");
+  };
+
+  burgerIcon.on("click", isActiveBurgerIcon);
+};
+
+// call mobile navbar burger menu
+navbarMenu();
+
 const imgFrame = $(".img-frame-container");
 
 // get from local storage

@@ -35,11 +35,6 @@ body {
   );
 }
 
-#navbar-logo,
-#burger {
-  max-height: 100px;
-}
-
 /* cards styling */
 
 .paint-card {

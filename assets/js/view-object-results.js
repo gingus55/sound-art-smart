@@ -397,10 +397,6 @@ const handleResponse = function (response) {
   return response.json();
 };
 
-// //get from LS
-// const highScoreDataFromLS =
-//   JSON.parse(localStorage.getItem("highScores")) ?? [];
-
 const array = ["painting", "Places", "Tempera", "Egyptian Art", "Islamic Art"];
 
 // document on load
