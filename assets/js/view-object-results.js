@@ -17,6 +17,40 @@ const mainContainer = $(".main-container");
 const quoteContainer = $("#quote-box");
 const accordionContainer = $(".accordions-container");
 
+// transform quote data
+const getQuoteOfTheDayContents = function (quoteOfTheDayResult) {
+  const quoteOfTheDayContents = quoteOfTheDayResult.contents.quotes[0];
+
+  return {
+    quote: quoteOfTheDayContents.quote,
+    author: quoteOfTheDayContents.author,
+  };
+};
+
+// construct the artist quote section
+renderArtistQuote = function (quoteData) {
+  const quoteBlockHtml = `<blockquote>
+      <p class="is-size-3 is-italic mb-5">
+        “${quoteData.quote}”
+      </p>
+      <p class="is-size-3">${quoteData.author}</p>
+    </blockquote> `;
+
+  return quoteContainer.append(quoteBlockHtml);
+};
+
+const getQuoteOfTheDayData = async function () {
+  const quoteOfTheDayUrl = "https://quotes.rest/qod?category=art&language=en";
+
+  const quoteOfTheDayResponse = await fetch(quoteOfTheDayUrl);
+  const quoteOfTheDayResult = await quoteOfTheDayResponse.json();
+
+  const quoteOfTheDayData = getQuoteOfTheDayContents(quoteOfTheDayResult);
+
+  // return quoteOfTheDayData;
+  renderArtistQuote(quoteOfTheDayData);
+};
+
 // convert data
 const getObjectData = function (dataInfo) {
   const objectData = {
@@ -131,38 +165,9 @@ const renderMainSectionOfResults = function (objectData) {
   return mainResultsSectionHtml;
 };
 
-// transform quote data
-const getQuoteOfTheDayContents = function (quoteOfTheDayResult) {
-  const quoteOfTheDayContents = quoteOfTheDayResult.contents.quotes[0];
-
-  return {
-    quote: quoteOfTheDayContents.quote,
-    author: quoteOfTheDayContents.author,
-  };
-};
-
-// construct the artist quote section
-renderArtistQuote = function (quoteData) {
-  const quoteBlockHtml = `<div class="has-text-centered" id="quote-box">
-  <blockquote>
-    <p class="is-size-3 is-italic mb-5">
-      “It is good to love many things, for therein lies the true strength,
-      and whosoever loves much performs much, and can accomplish much, and
-      what is done in love is well done.”
-    </p>
-    <p class="is-size-3">Vincent van Gogh</p>
-  </blockquote>
-</div>`;
-
-  return quoteBlockHtml;
-};
-
 // append all the object page to the body
-const appendAllObjectResultContentToBody = function (objectData, quoteData) {
-  mainContainer.append(
-    renderMainSectionOfResults(objectData),
-    renderArtistQuote(quoteData)
-  );
+const appendAllObjectResultContentToBody = function (objectData) {
+  mainContainer.append(renderMainSectionOfResults(objectData));
 };
 
 // Make Api call for object data
@@ -354,6 +359,8 @@ const array = ["painting", "Places", "Tempera", "Egyptian Art", "Islamic Art"];
 // document on load
 const onReady = function () {
   navbarMenu();
+
+  getQuoteOfTheDayData();
 
   makeObjectCall();
 
