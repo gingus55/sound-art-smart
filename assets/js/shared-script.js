@@ -4,15 +4,15 @@ const paintingsArr = [
     cards: [
       {
         name: "People",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-people.jpeg",
       },
       {
         name: "Places",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-places.jpeg",
       },
       {
         name: "Animals",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-animals.jpeg",
       },
     ],
   },
@@ -21,15 +21,15 @@ const paintingsArr = [
     cards: [
       {
         name: "Oil",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-oil.jpeg",
       },
       {
         name: "Watercolour",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-watercolor.jpg",
       },
       {
         name: "Tempera",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-tempera.png",
       },
     ],
   },
@@ -38,27 +38,27 @@ const paintingsArr = [
     cards: [
       {
         name: "Egyptian Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-egyptian.png",
         deptId: "10",
       },
       {
         name: "Greek and Roman Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-greekroman.jpg",
         deptId: "13",
       },
       {
         name: "Islamic Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-islamic.jpg",
         deptId: "14",
       },
       {
         name: "Medieval Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-medieval.jpg",
         deptId: "17",
       },
       {
         name: "Modern Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/paint/p-modern.jpg",
         deptId: "21",
       },
     ],
@@ -71,15 +71,15 @@ const sculpturesArr = [
     cards: [
       {
         name: "People",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-people.jpg",
       },
       {
         name: "Places",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-places.jpg",
       },
       {
         name: "Animals",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-animals.jpg",
       },
     ],
   },
@@ -88,19 +88,19 @@ const sculpturesArr = [
     cards: [
       {
         name: "Clay",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-clay.jpg",
       },
       {
         name: "Marble",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-marble.jpg",
       },
       {
         name: "Metal",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-metal.jpg",
       },
       {
         name: "Gold",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-gold.jpg",
       },
     ],
   },
@@ -109,27 +109,27 @@ const sculpturesArr = [
     cards: [
       {
         name: "Egyptian Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-egyptian.jpg",
         deptId: "10",
       },
       {
         name: "Greek and Roman Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-greekroman.jpg",
         deptId: "13",
       },
       {
         name: "Islamic Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-islamic.jpg",
         deptId: "14",
       },
       {
         name: "Medieval Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-medieval.jpg",
         deptId: "17",
       },
       {
         name: "Modern Art",
-        img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFpbnRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        img: "./assets/images/sculpture/s-modern.jpg",
         deptId: "21",
       },
     ],
