@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
     <link
       rel="stylesheet"
       href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
@@ -28,10 +29,37 @@
           <a href="" class="navbar-item py-2 px-2">
             <img
               src="./assets/images/saslogo.png"
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment-range/3.1.1/moment-range.js"
+    ></script>
+
+    <link rel="stylesheet" href="./assets/css/gallery.css" />
+    <title>Jonny gallery ideas</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="header">
+      <nav class="navbar has-shadow" id="nav-bar-bg">
+        <!-- LOGO -->
+        <div class="navbar-brand">
+          <a href="./index.html" class="navbar-item py-2 px-2">
+            <img
+              src="https://www.washingtoncenter.org/wp-content/uploads/2018/07/Arts-Guild-Logo-1-Black-Copy.jpg"
+
               alt="logo"
               id="navbar-logo"
             />
           </a>
+
+
+
+          <!-- BURGER MENU -->
 
           <div class="navbar-burger" id="burger">
             <span></span>
@@ -40,9 +68,6 @@
           </div>
         </div>
 
-        <div class="navbar-menu" id="nav-links">
-          <div class="navbar-end">
-            <a href="" class="navbar-item is-size-5">Home</a>
             <a href="./question.html" class="navbar-item is-size-5"
               >Get Started</a
             >
@@ -50,28 +75,35 @@
               >Favourites</a
             >
             <a href="./gallery.html" class="navbar-item is-size-5">Gallery</a>
-            <a href="" class="navbar-item is-size-5">About Us</a>
+
           </div>
         </div>
       </nav>
     </header>
 
-    <main>
-      <section id="containment-wrapper">
-        <!-- <div id="draggable3" class="draggable ui-widget-content">
-          <img src="./download.jpg" />
-        </div> -->
+    <div class="banner">
+      <h1 class="title">Jonny gallery ideas</h1>
+    </div>
+
+    <main class="container">
+      <!-- flex container for examples-->
+      <section class="paint-container">
+        <html>
+          <head>
+            <title>Gallery</title>
+            <link
+              href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+              rel="stylesheet"
+            />
+            <link rel="stylesheet" href="./assets/css/gallery.css" />
+          </head>
+
+          <body>
+            <div id="dragDrop"></div>
+          </body>
+        </html>
       </section>
     </main>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-
-    <script src="./assets/js/shared-script.js"></script>
 
     <script src="./assets/js/gallery.js"></script>
   </body>
