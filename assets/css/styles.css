@@ -96,7 +96,7 @@ body {
   color: white;
 }
 
-#bad-search{
+#bad-search {
   font-size: 100px;
   color: #e2554b;
 }
@@ -117,8 +117,8 @@ body {
   justify-content: center;
 }
 
-.search-img{
-  height: 
+.search-img {
+  height: ;
 }
 
 .card-img img {
@@ -159,6 +159,9 @@ body {
   padding: 0.5em;
   float: left;
   margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: center;
+  border: 5px black solid;
 }
 
 #draggable,
