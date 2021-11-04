@@ -9,7 +9,7 @@ function getFromLocalStorage() {
 const frameBorder = function (localStorageArray) {
   const renderImg = function (each) {
     console.log(each.imageUrl);
-    const imgDivHtml = `<div class="frame ">
+    const imgDivHtml = `<div class="frame animate__animated animate__fadeIn">
         <img
         src="${each.imageUrl}"
         alt="${each.title}"

@@ -263,7 +263,7 @@ const accordionContent = [
   },
   {
     title: "People",
-    info: ".......................",
+    info: "For thousands of years the human figure has appeared in art. Early cave paintings show figures of hunters simply depicted using a few strokes. In ancient Greece human figures were the main subject on decorated vases. Through the ages the human figure has appeared in portraits, has been used to tell stories or express beliefs, or used to explore what it is to be human.",
   },
   {
     title: "Oil",
@@ -275,7 +275,7 @@ const accordionContent = [
   },
   {
     title: "Tempera",
-    info: "tempera painting, painting executed with pigment ground in a water-miscible medium. The word tempera originally came from the verb temper, “to bring to a desired consistency.” Dry pigments are made usable by “tempering” them with a binding and adhesive vehicle.Tempera is an ancient medium, having been in constant use in most of the world’s cultures until it was gradually superseded by oil paints in Europe, during the Renaissance. Tempera was the original mural medium in the ancient dynasties of Egypt, Babylonia, Mycenaean Greece, and China and was used to decorate the early Christian catacombs. It was employed on a variety of supports, from the stone stelae (or commemorative pillars), mummy cases, and papyrus rolls of ancient Egypt to the wood panels of Byzantine icons and altarpieces and the vellum leaves of medieval illuminated manuscripts. ",
+    info: "Tempera painting, painting executed with pigment ground in a water-miscible medium. The word tempera originally came from the verb temper, “to bring to a desired consistency.” Dry pigments are made usable by “tempering” them with a binding and adhesive vehicle.Tempera is an ancient medium, having been in constant use in most of the world’s cultures until it was gradually superseded by oil paints in Europe, during the Renaissance. Tempera was the original mural medium in the ancient dynasties of Egypt, Babylonia, Mycenaean Greece, and China and was used to decorate the early Christian catacombs. It was employed on a variety of supports, from the stone stelae (or commemorative pillars), mummy cases, and papyrus rolls of ancient Egypt to the wood panels of Byzantine icons and altarpieces and the vellum leaves of medieval illuminated manuscripts. ",
   },
   {
     title: "Egyptian Art",
@@ -295,7 +295,7 @@ const accordionContent = [
   },
   {
     title: "Modern Art",
-    info: `places painting are ..........`,
+    info: "Modern art refers to artistic works produced from the 1860s to about the 1970s. It refers to the style and philosophy of the art produced during that era.[1]p102 The period coincides with the invention of mechanical means of recording images: photography and film. The term modern art is usually associated with art in which the traditions of the past have been thrown aside in a spirit of experimentation.[3]p419 Modern artists experimented with new ways of seeing and with fresh ideas about the nature of materials and functions of art. A tendency toward abstraction is characteristic of much modern art, including minimalism . More recent artistic production is often called Contemporary art or Postmodern art.",
   },
   {
     title: "sculptures",
@@ -303,19 +303,19 @@ const accordionContent = [
   },
   {
     title: "Metal",
-    info: `places painting are ..........`,
+    info: "The oldest metal sculpture pieces are made out of copper alloys and bronze.These metals offer the artist strength while also being malleable.Other metals such as gold and silver are softer, enabling the artisan the ability to shape the metal with tools and by hammering. It is thought that metal casting as an ancient art dates back 6000 years with the first works made out of gold and copper. The Chinese used metal to honor symbols of importance such as tigers, religious figures and leaders. The use of metal continued with the Greeks and Romans, who used bronze to make life-like statues and figurines.",
   },
   {
     title: "Gold",
-    info: `places painting are ..........`,
+    info: "From the very earliest human discoveries of gold, thought to have occurred between the 6th and 4th centuries BC, the precious metal was known to be something rare and special.The ancient Egyptians found a better use for the material. They transformed it into objects invested with divine associations and ornate decorations for divinely ordained rulers. Gold would quickly come to signify not only godliness, but wealth, purity, and prestige. Indeed, throughout human history, works of art incorporating gold have served myriad purposes, from displays of piety to displays of economic power and luxury.",
   },
   {
     title: "Marble",
-    info: `places painting are ..........`,
+    info: "Prior to Classical Antiquity, stone sculpture was generally made from limestone, sandstone, gypsum, alabaster, jade or clay. Only from the era of Greek Archaic sculpture (c.650-480 BCE) onwards, was marble used on a regular basis - initially to make the standing nude male (kouros) and the standing draped female (kore). During Classical Greek sculpture (c.480-323), which witnessed the glorious reliefs of the Parthenon, bronze sculpture became equally important. Marble was also important in Roman sculpture - especially Roman relief sculpture. The discovery and proximity of marble stone quarries (for Pentelic, Carrara and Parian varieties of the stone) was also an important factor in its use for sculptural purposes, as was its cost: two reasons why it was not generally used to decorate the hundreds of cathedrals, abbeys and churches that were built during the era of Romanesque and Gothic sculpture.",
   },
   {
     title: "Clay",
-    info: `places painting are ..........`,
+    info: "William Harbutt William Harbutt from Bath invented the modelling clay in 1897 to enable his sculpture students to correct their work. It has been used for a variety of reasons since then - from making topographical models during both world wars and more recently, for making animation classic Wallace & Gromit.",
   },
 ];
 
@@ -397,6 +397,10 @@ const handleResponse = function (response) {
   return response.json();
 };
 
+// //get from LS
+// const highScoreDataFromLS =
+//   JSON.parse(localStorage.getItem("highScores")) ?? [];
+
 const array = ["painting", "Places", "Tempera", "Egyptian Art", "Islamic Art"];
 
 // document on load
@@ -405,7 +409,7 @@ const onReady = function () {
 
   initializeLocalStorage();
 
-  // getQuoteOfTheDayData();
+  getQuoteOfTheDayData();
 
   makeObjectCall();
 
