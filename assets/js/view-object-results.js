@@ -17,6 +17,16 @@ const mainContainer = $(".main-container");
 const quoteContainer = $("#quote-box");
 const accordionContainer = $(".accordions-container");
 
+//url information
+const urlObjectId = new URL(window.location).search.split("=")[1];
+const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${urlObjectId}`;
+
+// get info from local storage
+function getFromLocalStorage() {
+  const localStorageData = JSON.parse(localStorage.getItem("object-data"));
+  return localStorageData === null ? JSON.stringify([]) : localStorageData;
+}
+
 // transform quote data
 const getQuoteOfTheDayContents = function (quoteOfTheDayResult) {
   const quoteOfTheDayContents = quoteOfTheDayResult.contents.quotes[0];
@@ -51,7 +61,7 @@ const getQuoteOfTheDayData = async function () {
   renderArtistQuote(quoteOfTheDayData);
 };
 
-// convert data
+// convert object data
 const getObjectData = function (dataInfo) {
   const objectData = {
     title: dataInfo.title,
@@ -170,19 +180,43 @@ const appendAllObjectResultContentToBody = function (objectData) {
   mainContainer.append(renderMainSectionOfResults(objectData));
 };
 
+// saving object information
+
+const savingDataInfo = function (objData) {
+  return {
+    objectID: objData.objectID,
+    imageUrl: objData.primaryImage,
+    title: objData.title,
+    redirectLink: url,
+  };
+};
+
 // Make Api call for object data
 
 const makeObjectCall = async function () {
-  const urlObjectId = new URL(window.location).search.split("=")[1];
-  const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${urlObjectId}`;
-
   const data = await apiRequest(url);
-
-  console.log(data);
 
   const dataFromObject = getObjectData(data);
 
   appendAllObjectResultContentToBody(dataFromObject);
+
+  const saveBtn = $(".btn-container");
+
+  const handleSaveBtn = function (event) {
+    const saveInfoToFav = savingDataInfo(data);
+
+    const localStorageArray = getFromLocalStorage();
+
+    const saveObjectInfo = function (each) {
+      if (each.objectID != data.objectID) {
+        console.log(`can push`);
+      }
+    };
+
+    localStorageArray.forEach(saveObjectInfo);
+  };
+
+  saveBtn.on("click", handleSaveBtn);
 };
 
 // construct accordion
