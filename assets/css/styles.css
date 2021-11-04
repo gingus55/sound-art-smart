@@ -41,13 +41,9 @@ body {
   );
 }
 
+#navbar-logo,
 #burger {
-  max-height: 100px;
-}
-
-#navbar-logo {
-  width: 48px;
-  height: 36px;
+  max-height: 60px;
 }
 
 /* LANDING Page Styles */
