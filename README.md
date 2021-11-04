@@ -40,7 +40,7 @@ Finally, from any page the user can access an About Us page, the questionnaire, 
 
 ## Deployed Application
 
-[GitHub Repository](https://github.com/gingus55/sound-art-smart)
+[Deployed URL](https://gingus55.github.io/sound-art-smart/)
 
 ## Screenshots
 
