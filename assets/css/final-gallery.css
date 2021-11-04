@@ -50,26 +50,27 @@ body {
 
 .wall{
   background-image: 
-    url("./assets/images/whitebrickwall.jpg");
-    margin: 0px 60px;
-    
+    url("../images/whitebrickwall.jpg");
+    margin: 0px 60px;  
+    background-size: cover;
+
 }
 
 
 .space{
   background-image: 
-    url("./assets/images/space.jpg");
+    url("../images/space.jpg");
     margin: 0px 60px;
-    background-repeat:no-repeat;
+    /* background-repeat:no-repeat; */
     background-size: contain;
 }
 
 .sunset{
   background-image: 
-    url("./assets/images/sunset.jpg");
+    url("../images/sunset.jpg");
     margin: 0px 60px;
-    background-repeat:no-repeat;
-    background-size: contain;
+    /* background-repeat:no-repeat; */
+    background-size: cover;
 }
 
 .button{
@@ -104,6 +105,7 @@ img {
   padding: 1vmin;
   position: relative;
   text-align: center;
+
   &:before {
     border-radius: 2px;
     bottom: -2vmin;
