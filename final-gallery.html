@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
 
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-
-    <link rel="stylesheet" href="./zzzz.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/styles.css" /> -->
+    <link rel="stylesheet" href="./assets/css/final-gallery.css" />
+    <title>Gallery</title>
   </head>
   <body>
+    <!-- NAVBAR -->
     <header>
       <nav class="navbar has-shadow" id="nav-bar-bg">
         <div class="navbar-brand">
@@ -41,38 +43,42 @@
 
         <div class="navbar-menu" id="nav-links">
           <div class="navbar-end">
-            <a href="./index.html" class="navbar-item is-size-5">Home</a>
+            <a href="" class="navbar-item is-size-5">Home</a>
             <a href="./question.html" class="navbar-item is-size-5"
               >Get Started</a
             >
             <a href="./favourites.html" class="navbar-item is-size-5"
               >Favourites</a
             >
-            <a href="./zzzz.html" class="navbar-item is-size-5">Gallery</a>
+            <a href="./final-gallery.html" class="navbar-item is-size-5">Gallery</a>
             <a href="" class="navbar-item is-size-5">About Us</a>
           </div>
         </div>
       </nav>
     </header>
 
+    <main>
     <div class="is-size-1 title has-text-centered mt-5 mb-5">Gallery</div>
+     <div id="background-btn-container" class="has-text-centered mb-5">
+       <button class="button" data-type="btn" id="wall">White Wall</button>
+       <button class="button" data-type="btn" id="space">Space</button>
+       <button class="button" data-type="btn" id="beach">Sunset</button>
 
-    <section
-      class="
-        img-frame-container
-        is-flex
-        is-flex-direction-row
-        is-flex-wrap-wrap
-        is-justify-content-flex-start
-      "
-    ></section>
+     </div> 
+      <section id="containment-wrapper">
+       
+      </section>
+    </main>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
-    <script src="./zzz.js"></script>
+    <script src="./assets/js/shared-script.js"></script>
+
+    <script src="./assets/js/final-gallery.js"></script>
   </body>
 </html>
