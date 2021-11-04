@@ -21,6 +21,14 @@ const accordionContainer = $(".accordions-container");
 const urlObjectId = new URL(window.location).search.split("=")[1];
 const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${urlObjectId}`;
 
+// initialize LS
+function initializeLocalStorage() {
+  const objectInfo = JSON.parse(localStorage.getItem("object-data"));
+  if (!objectInfo) {
+    return localStorage.setItem("object-data", JSON.stringify([]));
+  }
+}
+
 // get info from local storage
 function getFromLocalStorage() {
   const localStorageData = JSON.parse(localStorage.getItem("object-data"));
@@ -394,7 +402,9 @@ const array = ["painting", "Places", "Tempera", "Egyptian Art", "Islamic Art"];
 const onReady = function () {
   navbarMenu();
 
-  getQuoteOfTheDayData();
+  initializeLocalStorage();
+
+  // getQuoteOfTheDayData();
 
   makeObjectCall();
 
