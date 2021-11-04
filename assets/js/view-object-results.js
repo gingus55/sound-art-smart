@@ -207,15 +207,13 @@ const makeObjectCall = async function () {
 
     const localStorageArray = getFromLocalStorage();
 
-    const saveObjectInfo = function (each) {
-      if (each.objectID != data.objectID) {
-        localStorageArray.push(saveInfoToFav);
-
-        console.log(localStorageArray);
-      }
-    };
-
-    localStorageArray.forEach(saveObjectInfo);
+    var index = localStorageArray.findIndex(
+      (x) => x.objectID == saveInfoToFav.objectID
+    );
+    if (index === -1) {
+      localStorageArray.push(saveInfoToFav);
+      localStorage.setItem("object-data", JSON.stringify(localStorageArray));
+    }
   };
 
   saveBtn.on("click", handleSaveBtn);
