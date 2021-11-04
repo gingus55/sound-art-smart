@@ -209,7 +209,9 @@ const makeObjectCall = async function () {
 
     const saveObjectInfo = function (each) {
       if (each.objectID != data.objectID) {
-        console.log(`can push`);
+        localStorageArray.push(saveInfoToFav);
+
+        console.log(localStorageArray);
       }
     };
 
