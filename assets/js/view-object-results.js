@@ -131,6 +131,16 @@ const renderMainSectionOfResults = function (objectData) {
   return mainResultsSectionHtml;
 };
 
+// transform quote data
+const getQuoteOfTheDayContents = function (quoteOfTheDayResult) {
+  const quoteOfTheDayContents = quoteOfTheDayResult.contents.quotes[0];
+
+  return {
+    quote: quoteOfTheDayContents.quote,
+    author: quoteOfTheDayContents.author,
+  };
+};
+
 // construct the artist quote section
 renderArtistQuote = function (quoteData) {
   const quoteBlockHtml = `<div class="has-text-centered" id="quote-box">
