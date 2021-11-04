@@ -77,6 +77,11 @@ body {
   line-height: 50px;
 }
 
+.dataText {
+  font-size: 18px;
+  line-height: 70px;
+}
+
 /* Quotation  */
 
 #quote-box {
@@ -143,5 +148,10 @@ body {
   #img-facts-container {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .dataText {
+    font-size: 20px;
+    line-height: 65px;
   }
 }

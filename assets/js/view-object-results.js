@@ -92,93 +92,94 @@ const getObjectData = function (dataInfo) {
 // construct the main page of the individual results page
 const renderMainSectionOfResults = function (objectData) {
   const mainResultsSectionHtml = `
-  <div class="is-size-1 title has-text-centered mt-5 mb-5">${objectData.title}</div>
+    <div class="is-size-1 title has-text-centered mt-5 mb-5">${objectData.title}</div>
 
-  <div class="btn-container has-text-centered mb-5">
-    <button class="button is-medium is-danger">Save</button>
-  </div>
+    <div class="btn-container has-text-centered mb-5">
+      <button class="button is-medium is-danger">Save</button>
+    </div>
 
-  <main class="margin-adjustment">
-    
+    <main class="margin-adjustment">
+      
 
-      <div class="is-flex" id="img-facts-container">
-        <!-- pAINTING CARD -->
-        <div class="paint-card m-5">
-          <div class="card-img">
-            <img
-              src=${objectData.image}
-        alt=“landscape-painting"
-              alt=""
-            />
+        <div class="is-flex" id="img-facts-container">
+          <!-- pAINTING CARD -->
+          <div class="paint-card m-5">
+            <div class="card-img">
+              <img
+                src=${objectData.image}
+          alt=“landscape-painting"
+                alt=""
+              />
+            </div>
           </div>
-        </div>
 
-        
-        <div class="art-works-fact-container">
-          <div class="title has-text-centered is-underlined mb-6">
-            Facts About The Art Work
-          </div>
-          <div
-            class="
-              is-flex
-              is-flex-direction-row
-              is-flex-wrap-wrap
-              is-align-content-center
-            "
-            id="facts"
-          >
-            <div class="is-size-6 pl-5">
-              <ul>
-                <li>
-                  <span class="has-text-weight-bold">Art Work Name:</span> ${objectData.name}
+          
+          <div class="art-works-fact-container">
+            <div class="title has-text-centered is-underlined mb-6">
+              Facts About The Art Work
+            </div>
+            <div
+              class="
+                is-flex
+                is-flex-direction-row
+                is-flex-wrap-wrap
+                is-align-content-center
+              "
+              id="facts"
+            >
+              <div class=" pl-5 dataText">
+                <ul>
+                  <li>
+                    <span class="has-text-weight-bold">Art Work Name:</span> ${objectData.name}
+                  </li>
+
+                  <li>
+                    <span class="has-text-weight-bold">Artist:</span> ${objectData.artistName} ${objectData.artistBio}
+                  </li>
+
+                  <li>
+                  <span class="has-text-weight-bold">Artist Bio:</span> ${objectData.artistBio}
                 </li>
 
-                <li>
-                  <span class="has-text-weight-bold">Artist:</span> ${objectData.artistName} ${objectData.artistBio}
-                </li>
+                  <li><span class="has-text-weight-bold">Date:</span> ${objectData.date}</li>
 
+                  <li>
+                    <span class="has-text-weight-bold">Medium:</span> ${objectData.medium}
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class=" pl-5 dataText">
+                <ul>
+                
                 <li>
-                <span class="has-text-weight-bold">Artist Bio:</span> ${objectData.artistBio}
+                <span class="has-text-weight-bold">Department:</span> ${objectData.department}
               </li>
 
-                <li><span class="has-text-weight-bold">Date:</span> ${objectData.date}</li>
-
-                <li>
-                  <span class="has-text-weight-bold">Medium:</span> ${objectData.medium}
-                </li>
-
-              </ul>
-            </div>
-            <div class="is-size-6 pl-5">
-              <ul>
-              
-              <li>
-              <span class="has-text-weight-bold">Department:</span> ${objectData.department}
-            </li>
-
-                <li>
-                  <span class="has-text-weight-bold">Dimensions:</span> ${objectData.size}
-                </li>
-                <li>
-                  <span class="has-text-weight-bold">Classification:</span>
-                  ${objectData.class}
-                </li>
-                <li>
-                  <span class="has-text-weight-bold">Credit Line:</span>
-                  ${objectData.line}
-                </li>
-                <li>
-                  <span class="has-text-weight-bold">Accession Number:</span>
-                  ${objectData.accessionYear}
-                </li>
-              </ul>
+                  <li>
+                    <span class="has-text-weight-bold">Dimensions:</span> ${objectData.size}
+                  </li>
+                  <li>
+                    <span class="has-text-weight-bold">Classification:</span>
+                    ${objectData.class}
+                  </li>
+                  <li>
+                    <span class="has-text-weight-bold">Credit Line:</span>
+                    ${objectData.line}
+                  </li>
+                  <li>
+                    <span class="has-text-weight-bold">Accession Number:</span>
+                    ${objectData.accessionYear}
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-  `;
+    `;
 
   return mainResultsSectionHtml;
 };
