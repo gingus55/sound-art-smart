@@ -48,7 +48,7 @@ Finally, from any page the user can access an About Us page, the questionnaire, 
 
 #### Index page
 
-![Sound Art Smart index page](./assets/images/screenshots/index-page.png)
+![Sound Art Smart index page](./assets/images/screenshots/index.png)
 
 #### Questionnaire sample page
 
