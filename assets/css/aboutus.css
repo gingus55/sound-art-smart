@@ -75,7 +75,14 @@
     border-radius: 4px;
     box-shadow: 3px 3px 3px #d4d4d4;
     background-color: rgba(255, 255, 240, 0.5);
+    object-fit: contain;
   }
+  .card-img {
+    height: auto;
+    width: 70px;
+  }
+
+
   .card-img img {
     width: 100%;
     max-height: 180px;
@@ -129,6 +136,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(209, 194, 97);
+    object-fit: contain;
   }
 
   .name {
@@ -220,6 +228,11 @@
   color: gold;
 }
 
+.profile-img {
+  height: auto;
+  width: 250px;
+
+}
   @media only screen and (max-width: 768px) {
     body {
       height: auto;
