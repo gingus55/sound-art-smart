@@ -113,7 +113,6 @@ body {
   justify-content: center;
 }
 
-
 .card-img img {
   width: 100%;
   height: 100%;
@@ -167,12 +166,6 @@ body {
 }
 #draggable2 {
   cursor: e-resize;
-}
-#containment-wrapper {
-  width: 95%;
-  height: 100vh;
-  border: 2px solid #ccc;
-  padding: 10px;
 }
 
 /* Adjust background image responsiveness */

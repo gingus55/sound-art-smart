@@ -32,8 +32,12 @@
   max-height: 60px;
 }
 
-
-
+#containment-wrapper {
+  width: 95%;
+  min-height: 200vh;
+  border: 2px solid #ccc;
+  padding: 10px;
+}
 
 body {
   margin: 0;
@@ -48,34 +52,29 @@ body {
   background-color: var(--ivory);
 }
 
-.wall{
-  background-image: 
-    url("../images/whitebrickwall.jpg");
-    margin: 0px 60px;  
-    background-size: cover;
-
+.wall {
+  background-image: url("../images/whitebrickwall.jpg");
+  margin: 0px 60px;
+  background-size: cover;
 }
 
-
-.space{
-  background-image: 
-    url("../images/space.jpg");
-    margin: 0px 60px;
-    /* background-repeat:no-repeat; */
-    background-size: contain;
+.space {
+  background-image: url("../images/space.jpg");
+  margin: 0px 60px;
+  /* background-repeat:no-repeat; */
+  background-size: contain;
 }
 
-.sunset{
-  background-image: 
-    url("../images/sunset.jpg");
-    margin: 0px 60px;
-    /* background-repeat:no-repeat; */
-    background-size: cover;
+.sunset {
+  background-image: url("../images/sunset.jpg");
+  margin: 0px 60px;
+  /* background-repeat:no-repeat; */
+  background-size: cover;
 }
 
-.button{
+.button {
   width: 110px;
-  margin: 0px 10px
+  margin: 0px 10px;
 }
 
 img {
