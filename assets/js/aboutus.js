@@ -1,10 +1,8 @@
-console.log("howdy planet");
-
 const aboutUsContent = [
   {
     name: "Chris",
     status: "Teacher",
-    bio: "My interest in mathematics developed at an early age when I became obsessed with the statistics on the back of my passion for football. I have chosen additional education to advance my logical thinking and ability to pass the knowledge to others. I highly enjoy complexity and solving problems. In my spare time I love to read and outdoors activities with my family.",
+    bio: "My interest in mathematics developed at an early age when I became obsessed with the statistics in video games. I have chosen additional education to advance my logical thinking and ability to pass the knowledge to others. I highly enjoy complexity and solving problems. In my spare time I love to read and outdoors activities with my family.",
     img: "./assets/images/aboutus/Chris.img.jpg",
   },
   {
