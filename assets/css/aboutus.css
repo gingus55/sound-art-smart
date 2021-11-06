@@ -145,7 +145,7 @@
 
   /* CSS for about container */
 #about-container{
-  min-height: 200vh;
+  min-height: auto;
   display: flex;
 }
 
