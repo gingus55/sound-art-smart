@@ -23,7 +23,13 @@
     background-repeat: no-repeat;
     background-color: var(--ivory);
   }
-  
+
+  /* NAVBAR styles */
+  .header {
+    min-height: 5vh;
+  }
+
+
   #nav-bar-bg {
     background-color: var(--aqua);
     background-color: var(--turquoise);
@@ -37,7 +43,7 @@
   
   #navbar-logo,
   #burger {
-    max-height: 100px;
+    max-height: 60px;
   }
   
   /* cards styling */
