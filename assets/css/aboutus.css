@@ -152,7 +152,9 @@
   /* CSS for about container */
 #about-container{
   min-height: auto;
+  /* max-width: 300px; */
   display: flex;
+
 }
 
 /* CSS for large info container */
@@ -227,6 +229,14 @@
 
     .info-container{
       flex-direction: column;
+    }
+    #about-container{
+      flex-direction: column;
+    }
+    .profile-img {
+      height: auto;
+      width: 50px;
+    
     }
   } 
 }
