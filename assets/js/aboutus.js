@@ -34,6 +34,17 @@ const aboutUsContent = [
 const peopleContainer = $("#people-container");
 const aboutContainer = $("#about-container");
 
+const navbarMenu = function () {
+  const burgerIcon = $("#burger");
+  const navbarMenu = $("#nav-links");
+
+  const isActiveBurgerIcon = function () {
+    navbarMenu.toggle("is-active");
+  };
+
+  burgerIcon.on("click", isActiveBurgerIcon);
+};
+
 // create info block
 const createInfo = function (arrayUs, idName) {
   const identifier = function (each) {
@@ -67,6 +78,8 @@ const handleClick = function (event) {
 };
 
 const onReady = function () {
+  navbarMenu();
+
   peopleContainer.on("click", handleClick);
 };
 
