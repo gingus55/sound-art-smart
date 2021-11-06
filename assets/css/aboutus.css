@@ -1,0 +1,236 @@
+ :root {
+    --aqua: #a9c7c3;
+    --turquoise: #4d6663;
+    --coral: #e07069;
+    --ivory: #f1efe8;
+    --green: #4daa59;
+  }
+  
+  * {
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+  
+  body {
+    margin: 0;
+  
+    background-image: linear-gradient(to bottom, var(--ivory), #f1efe88c),
+      url("https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80");
+    height: 200vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: var(--ivory);
+  }
+
+  /* NAVBAR styles */
+  .header {
+    min-height: 5vh;
+  }
+
+
+  #nav-bar-bg {
+    background-color: var(--aqua);
+    background-color: var(--turquoise);
+    background-image: linear-gradient(
+      319deg,
+      var(--aqua) 0%,
+      var(--ivory) 37%,
+      var(--turquoise) 100%
+    );
+  }
+  
+  #navbar-logo,
+  #burger {
+    max-height: 60px;
+  }
+  
+  /* cards styling */
+  .paint-card {
+    width: 12rem;
+    height: 220px;
+    border: 1px solid #a3a3a3;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #d4d4d4;
+    background-color: rgba(255, 255, 240, 0.5);
+    object-fit: contain;
+  }
+  .card-img {
+    height: auto;
+    width: 70px;
+  }
+
+
+  .card-img img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+  }
+  
+  .paint-card:hover {
+    transform: scale(1.1);
+    border: 2px solid gold;
+  }
+ /* styling contact icons */
+  .contact {
+    display: flex;
+    color: gray;
+    align-items: center;
+    padding: 8px;
+    grid-column: inherit;
+    justify-content: space-around;
+    align-items: center;
+    border: 0; border-top: 1px solid gray
+  }
+
+  /* info container styling */
+
+  .info-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: initial;
+    justify-content: center;
+    align-items: center;
+    background: rgb(250, 243, 228);
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px rgb(209, 194, 97);;
+    padding-top: 50px;
+    padding: 16px;
+    margin-right: 60px;
+    margin-left: 136px;
+    margin-top: 150px;
+    margin-bottom: 15px 0px;
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+    background: royalblue;
+    margin: 2px 50px;
+    border: 3px solid rgb(209, 194, 97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 194, 97);
+    object-fit: contain;
+  }
+
+  .name {
+    margin-top: 80px;
+    padding: 0px 15px; 
+    text-align: left;
+    font-size: 50px;
+    line-height: 20px;
+  }
+
+  .status {
+    padding: 0px 20px; 
+    text-align: 20px; 
+    line-height: 100px;
+    margin: 0;
+    font-size:30px;
+  }
+  
+  .about {
+    height: 240px;
+    padding: 0px 20px;
+    text-align: wrap;
+  }
+
+  .image.hover {
+    border: 3px solid rgb(209, 194, 97); 
+  }
+  #info-box.hover {
+    color: #e07069;
+  }
+
+  /* CSS for about container */
+#about-container{
+  min-height: auto;
+  display: flex;
+}
+
+/* CSS for large info container */
+
+.info-container{
+   width: 1650px;
+   height: 380px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgb(250, 243, 228);
+   margin: 0 auto;
+   margin-top: 50px;
+   border-radius: 5px;
+   box-shadow: 0px 0px 50px rgb(209, 194, 97);;
+   padding-top: 50px;
+   padding: 16px;
+   margin-right: 60px;
+   margin-left: 136px;
+   margin-top: 150px;
+   margin-bottom: 15px 0px;
+}
+
+.image{
+  width: 200px;
+  height: 200px;
+  background: royalblue;
+  margin: 2px 50px;
+  border: 3px solid rgb(209, 194, 97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(209, 194, 97);
+}
+
+.status{
+  padding: 0px 20px; 
+  text-align: 20px; 
+  line-height: 100px;
+  margin: 0;
+  font-size:30px;
+}
+
+.about{
+  height: 240px;
+  padding: 0px 20px;
+  text-align: wrap;
+}
+
+.text-style {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding:0.5rem 1rem;
+}
+
+.info-box.hover {
+  background-color: rgb(16, 54, 88);
+  color: gold;
+}
+
+.profile-img {
+  height: auto;
+  width: 250px;
+
+}
+  @media only screen and (max-width: 768px) {
+    body {
+      height: auto;
+    }
+
+    .info-container{
+      flex-direction: column;
+    }
+  } 
+}
+
+
+
+  
