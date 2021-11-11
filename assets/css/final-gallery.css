@@ -55,6 +55,7 @@ body {
 
 #containment-wrapper {
   min-height: 150vh;
+  max-width: 95%;
 }
 
 .wall {
