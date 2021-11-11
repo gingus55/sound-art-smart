@@ -1,5 +1,3 @@
-console.log("howdy planet");
-
 // NAVBAR -- mobile menu
 const navbarMenu = function () {
   const burgerIcon = $("#burger");
@@ -39,7 +37,6 @@ function getFromLocalStorage() {
 
 const backgroundChange = function (event) {
   target = $(event.target);
-  // console.log(target);
   if (target.attr("data-type") == "btn") {
     if (target.attr("id") == "wall") {
       galleryContainer.attr("class", "wall");

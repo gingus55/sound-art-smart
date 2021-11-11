@@ -1,5 +1,3 @@
-console.log("howdy planet");
-
 // NAVBAR -- mobile menu
 
 const navbarMenu = function () {

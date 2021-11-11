@@ -38,7 +38,6 @@ const getQuoteOfTheDayData = async function () {
 
   const quoteOfTheDayData = getQuoteOfTheDayContents(quoteOfTheDayResult);
 
-  console.log(quoteOfTheDayData);
   // return quoteOfTheDayData;
   renderQuoteOfTheDay(quoteOfTheDayData);
 };

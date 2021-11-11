@@ -141,7 +141,6 @@ const keyWords = [];
 
 const storeKeyword = function (word) {
   keyWords.push(word);
-  console.log(keyWords);
 };
 
 const apiRequest = async function (url, options = {}) {

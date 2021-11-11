@@ -135,7 +135,7 @@ const getObjectData = function (allData) {
       objectID: each.objectID,
     };
   };
-  console.log(allData);
+
   return allData.map(callback);
 };
 
@@ -171,7 +171,6 @@ const renderObjectResults = function (objectData) {
 };
 
 const handleData = async function (response) {
-  console.log(response);
   const objArray = response.objectIDs;
   // generate array of 6 objects
 
@@ -187,7 +186,6 @@ const handleData = async function (response) {
   // Get sub-array of first 6 elements after shuffled
   const objectIds = shuffled.slice(0, 6);
   // fetch data for each of the 6 objects from mock data headings
-  console.log(objectIds);
 
   const getPromise = function (objectId) {
     const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectId}`;
@@ -195,13 +193,11 @@ const handleData = async function (response) {
   };
 
   const promises = objectIds.map(getPromise);
-  console.log(promises);
 
   const allData = await Promise.all(promises);
-  console.log(allData);
 
   const objectData = await getObjectData(allData);
-  
+
   return objectData;
 };
 
@@ -243,10 +239,8 @@ const getDataFromApi = async function (url) {
 };
 
 const constructSearchUrl = function (keyWords) {
-  console.log(keyWords);
   // construct url
   const dept = keyWords[3];
-  // console.log(dept);
   const searchWordOne = keyWords[0];
   const searchWordTwo = keyWords[1];
   const searchWordThree = keyWords[2];
@@ -260,7 +254,6 @@ const objectIdCardContainer = $("#object-cards-container");
 // View Object click handler function
 const handleViewObjectClick = function (event) {
   const target = $(event.target);
-  // console.log(target);
   if (target.attr("id") == "save-btn") {
     // get data to save in LS
     const favouriteObject = {
