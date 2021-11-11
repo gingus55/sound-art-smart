@@ -53,6 +53,10 @@ body {
   background-color: var(--ivory);
 }
 
+#containment-wrapper {
+  min-height: 150vh;
+}
+
 .wall {
   background-image: url("../images/whitebrickwall.jpg");
   margin: 0px 60px;

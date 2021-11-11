@@ -48,7 +48,7 @@ Finally, from any page the user can access an About Us page, the questionnaire, 
 
 #### Index page
 
-![Sound Art Smart index page](./assets/images/screenshots/index-page.png)
+![Sound Art Smart index page](./assets/images/screenshots/index.png)
 
 #### Questionnaire sample page
 
@@ -62,8 +62,9 @@ Finally, from any page the user can access an About Us page, the questionnaire, 
 
 ![Favourites page](./assets/images/screenshots/favourites.png)
 
-<!-- #### Gallery page
-![Gallery page]() -->
+#### Gallery page
+
+![Gallery page](./assets/images/screenshots/gallery.png)
 
 ### Mobile Viewport
 
@@ -82,6 +83,3 @@ Finally, from any page the user can access an About Us page, the questionnaire, 
 #### Favourites page
 
 ![Favourites page](./assets/images/screenshots/favourites-mobile.png)
-
-<!-- #### Gallery page
-![Gallery page]() -->

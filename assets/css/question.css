@@ -16,7 +16,7 @@ body {
 
   background-image: linear-gradient(to bottom, var(--ivory), #f1efe88c),
     url("https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80");
-  height: 100vh;
+  height: auto;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -33,6 +33,10 @@ body {
     var(--ivory) 37%,
     var(--turquoise) 100%
   );
+}
+
+#question-container{
+  min-height: 100vh;
 }
 
 /* cards styling */

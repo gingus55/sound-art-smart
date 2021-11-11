@@ -240,11 +240,53 @@ const renderRandomArtFact = function () {
     "In 2003 street artist Banksy stuck his own work to the wall in the Tate Modern Museum: The prank was soon undone by its inadequate glue, but for a few hours Crimewatch UK Has Ruined the Countryside For All of Us was hung in one of the world’s most famous museums. It also inspired Andrzej Sobiepan, a Polish art student, to a similar feat in 2005, where for three days he successfully passed off his work as part of the National Museum’s collection.",
     "landscape painting, the depiction of natural scenery in art. Landscape paintings may capture mountains, valleys, bodies of water, fields, forests, and coasts and may or may not include man-made structures as well as people. Although paintings from the earliest ancient and Classical periods included natural scenic elements, landscape as an independent genre did not emerge in the Western tradition until the Renaissance in the 16th century. In the Eastern tradition, the genre can be traced back to 4th-century-CE China.",
     "Abstract art is modern art which does not represent images of our everyday world. It has colour, lines and shapes (form), but they are not intended to represent objects or living things. Often the artists were influenced by ideas and philosophies of abstraction. Abstract art is found in painting and in sculpture. There are also many works of art which are partly abstract, and partly representational. And there are many artists who work in abstract and other types of modern art.Purely abstract art is a 20th-century invention. It grew out of the earlier forms of modern art, but it is perhaps the one movement which is absolutely modern. It has no roots in earlier art (as we use the term today).",
+    "For thousands of years the human figure has appeared in art. Early cave paintings show figures of hunters simply depicted using a few strokes. In ancient Greece human figures were the main subject on decorated vases. Through the ages the human figure has appeared in portraits, has been used to tell stories or express beliefs, or used to explore what it is to be human.",
+    "Animals have been a source of inspiration for many artists. From art about rural life and growth, to myths and legends, animals are used in art in many different ways. Art can help us explore our relationship to wildlife and can help us think about how we care for animals and the environment. When it comes to animals, exploring habitats is one of the central themes for artists. With a world of textures, colours and shapes to explore, nature is an exciting feature in many artworks. Animals in artworks can make us consider our own relationship to nature. How do we treat wildlife and its environment? Are there some animals we look after more than others?",
   ];
 
   const randomFacts = Math.floor(Math.random() * factsOfArt.length);
 
   return factsOfArt[randomFacts];
+};
+
+const renderRandomPaintingFact = function () {
+  const factsOfPainting = [
+    "People have been painting for as long as 30,000 years! Early Cave paintings were drawn with red or yellow ochre, hematite, manganese oxide, and charcoal may have been made by early Homo sapiens as long as 30,000 years ago. These would have been ground to make up a primitive paint substance.  Other ingredients used were animal blood and fat. ",
+    "Oil paints were first used between the 5th & 9th century to decorate shields and other objects in western Afghanistan.The use of oil paints did not appear in Europe until the 15th century. Prior to this, most artist used egg tempera. Prior to the 19th Century, an artist's studio looked like a laboratory. The artists had to grind the pigments, boil the oil and use exact formulas to create their oil paints. Apprentices were hired to help with this chore.",
+    "Watercolors tend to be transparent when applied to your painting surface. that means it allows the light to pass through your painting canvas or painting paper. You can purchase watercolor that comes in tubes or in pans.  Watercolors in tubes are easy to use as you can directly apply them to your painting surface. You can also dilute tube watercolors with water to achieve your desired color or tint. On the other hand, watercolors in pans usually come with palette in them. Watercolors in pans are more expensive than tube watercolors. The most commonly used watercolors by artists are the ones in tubes.",
+    "Tempera painting, painting executed with pigment ground in a water-miscible medium. The word tempera originally came from the verb temper, “to bring to a desired consistency.” Dry pigments are made usable by “tempering” them with a binding and adhesive vehicle.Tempera is an ancient medium, having been in constant use in most of the world’s cultures until it was gradually superseded by oil paints in Europe, during the Renaissance. Tempera was the original mural medium in the ancient dynasties of Egypt, Babylonia, Mycenaean Greece, and China and was used to decorate the early Christian catacombs. It was employed on a variety of supports, from the stone stelae (or commemorative pillars), mummy cases, and papyrus rolls of ancient Egypt to the wood panels of Byzantine icons and altarpieces and the vellum leaves of medieval illuminated manuscripts. ",
+  ];
+
+  const randomFacts = Math.floor(Math.random() * factsOfPainting.length);
+
+  return factsOfPainting[randomFacts];
+};
+
+const renderRandomSculptureFact = function () {
+  const factsOfSculptures = [
+    "The oldest metal sculpture pieces are made out of copper alloys and bronze.These metals offer the artist strength while also being malleable.Other metals such as gold and silver are softer, enabling the artisan the ability to shape the metal with tools and by hammering. It is thought that metal casting as an ancient art dates back 6000 years with the first works made out of gold and copper. The Chinese used metal to honor symbols of importance such as tigers, religious figures and leaders. The use of metal continued with the Greeks and Romans, who used bronze to make life-like statues and figurines.",
+    "From the very earliest human discoveries of gold, thought to have occurred between the 6th and 4th centuries BC, the precious metal was known to be something rare and special.The ancient Egyptians found a better use for the material. They transformed it into objects invested with divine associations and ornate decorations for divinely ordained rulers. Gold would quickly come to signify not only godliness, but wealth, purity, and prestige. Indeed, throughout human history, works of art incorporating gold have served myriad purposes, from displays of piety to displays of economic power and luxury.",
+    "Prior to Classical Antiquity, stone sculpture was generally made from limestone, sandstone, gypsum, alabaster, jade or clay. Only from the era of Greek Archaic sculpture (c.650-480 BCE) onwards, was marble used on a regular basis - initially to make the standing nude male (kouros) and the standing draped female (kore). During Classical Greek sculpture (c.480-323), which witnessed the glorious reliefs of the Parthenon, bronze sculpture became equally important. Marble was also important in Roman sculpture - especially Roman relief sculpture. The discovery and proximity of marble stone quarries (for Pentelic, Carrara and Parian varieties of the stone) was also an important factor in its use for sculptural purposes, as was its cost: two reasons why it was not generally used to decorate the hundreds of cathedrals, abbeys and churches that were built during the era of Romanesque and Gothic sculpture.",
+    "William Harbutt William Harbutt from Bath invented the modelling clay in 1897 to enable his sculpture students to correct their work. It has been used for a variety of reasons since then - from making topographical models during both world wars and more recently, for making animation classic Wallace & Gromit.",
+  ];
+
+  const randomFacts = Math.floor(Math.random() * factsOfSculptures.length);
+
+  return factsOfSculptures[randomFacts];
+};
+
+const renderRandomTypeOfArtFact = function () {
+  const factsOfTypeOfArt = [
+    "Much of the artwork created by the Ancient Egyptians had to do with their religion. They would fill the tombs of the Pharaohs with paintings and sculptures. Much of this artwork was there to help the Pharaohs in the afterlife. Temples were another popular place for art. The temples often held large statues of their gods as well as many paintings on the walls. The Egyptians are famous for their giant works of sculptures. Some examples of this include the Great Sphinx of Giza and the statues of Ramses II at the Abu Simbel temples. Although they are famous for their giant statues, the Egyptians also carved smaller, more ornate sculptures. They used various materials including alabaster, ivory, limestone, basalt, wood gilded with gold, and sometimes even solid gold. In Ancient Egypt the tomb walls of the rich and powerful were often filled with paintings. These paintings were there to help the person in the afterlife. They often depicted the person buried passing into the afterlife. They would show scenes of this person happy in the afterlife. In one painting the man buried is shown hunting and his wife and son are in the picture.",
+    "The art of the ancient Greeks and Romans is called classical art. This name is used also to describe later periods in which artists looked for their inspiration to this ancient style. The Romans learned sculpture and painting largely from the Greeks and helped to transmit Greek art to later ages. Classical art owes its lasting influence to its simplicity and reasonableness, its humanity, and its sheer beauty. The first and greatest period of classical art began in Greece about the middle of the 5th century bc. By that time Greek sculptors had solved many of the problems that faced artists in the early archaic period. They had learned to represent the human form naturally and easily, in action or at rest. They were interested chiefly in portraying gods, however. They thought of their gods as people, but grander and more beautiful than any human being. They tried, therefore, to portray ideal beauty rather than any particular person. Their best sculptures achieved almost godlike perfection in their calm, ordered beauty.",
+    "Islamic art encompasses the visual arts produced from the seventh century onward by both Muslims and non-Muslims who lived within the territory that was inhabited by, or ruled by, culturally Islamic populations. It is thus a very difficult art to define because it spans some 1400 years, covering many lands and populations. This art is also not of a specific religion, time, place, or single medium. Instead Islamic art covers a range of artistic fields including architecture, calligraphy, painting, glass, ceramics, and textiles, among others. Islamic art is not restricted to religious art, but instead includes all of the art of the rich and varied cultures of Islamic societies. It frequently includes secular elements and elements that are forbidden by some Islamic theologians. Islamic religious art differs greatly from Christian religious art traditions. Because figural representations are generally considered to be forbidden in Islam, the word takes on religious meaning in art as seen in the tradition of calligraphic inscriptions. Calligraphy and the decoration of manuscript Qu’rans is an important aspect of Islamic art as the word takes on religious and artistic significance. Islamic art was influenced by Greek, Roman, early Christian, and Byzantine art styles, as well as the Sassanian art of pre-Islamic Persia. Central Asian styles were brought in with various nomadic incursions; and Chinese influences had a formative effect on Islamic painting, pottery, and textiles.",
+    "At the beginning of the medieval period most significant works of art were very rare and costly objects associated with secular elites, monasteries or major churches and, if religius, largely made by monks. Subsequently, by the end of middle ages works considerable artistic interest could be found in the small town and significant number of bourgeois homes in towns, their production was in many places an important local industry.",
+    "Modern art refers to artistic works produced from the 1860s to about the 1970s. It refers to the style and philosophy of the art produced during that era.[1]p102 The period coincides with the invention of mechanical means of recording images: photography and film. The term modern art is usually associated with art in which the traditions of the past have been thrown aside in a spirit of experimentation.[3]p419 Modern artists experimented with new ways of seeing and with fresh ideas about the nature of materials and functions of art. A tendency toward abstraction is characteristic of much modern art, including minimalism . More recent artistic production is often called Contemporary art or Postmodern art.",
+  ];
+
+  const randomFacts = Math.floor(Math.random() * factsOfTypeOfArt.length);
+
+  return factsOfTypeOfArt[randomFacts];
 };
 
 // store the content of the accordion in a array
@@ -254,8 +296,8 @@ const accordionContent = [
     info: renderRandomArtFact(),
   },
   {
-    title: "painting",
-    info: "People have been painting for as long as 30,000 years! Early Cave paintings were drawn with red or yellow ochre, hematite, manganese oxide, and charcoal may have been made by early Homo sapiens as long as 30,000 years ago. These would have been ground to make up a primitive paint substance.  Other ingredients used were animal blood and fat. ",
+    title: "Painting",
+    info: renderRandomPaintingFact(),
   },
   {
     title: "Animals",
@@ -298,8 +340,8 @@ const accordionContent = [
     info: "Modern art refers to artistic works produced from the 1860s to about the 1970s. It refers to the style and philosophy of the art produced during that era.[1]p102 The period coincides with the invention of mechanical means of recording images: photography and film. The term modern art is usually associated with art in which the traditions of the past have been thrown aside in a spirit of experimentation.[3]p419 Modern artists experimented with new ways of seeing and with fresh ideas about the nature of materials and functions of art. A tendency toward abstraction is characteristic of much modern art, including minimalism . More recent artistic production is often called Contemporary art or Postmodern art.",
   },
   {
-    title: "sculptures",
-    info: "Artist Willard Wigan once inhaled his own work: What’s that, you say? He inhaled a painting?? The man must be enormous! Not quite. Wigan’s works are ‘micro-sculptures’, so tiny they must be viewed through a microscope. In creating his art, Wigan has to slow his heartbeat and work between pulses. The work he inhaled was Alice, from Alice in Wonderland, but apparently she was even better when remade.",
+    title: "Sculptures",
+    info: renderRandomSculptureFact(),
   },
   {
     title: "Metal",
@@ -316,6 +358,10 @@ const accordionContent = [
   {
     title: "Clay",
     info: "William Harbutt William Harbutt from Bath invented the modelling clay in 1897 to enable his sculpture students to correct their work. It has been used for a variety of reasons since then - from making topographical models during both world wars and more recently, for making animation classic Wallace & Gromit.",
+  },
+  {
+    title: "Type of Art",
+    info: renderRandomTypeOfArtFact(),
   },
 ];
 
@@ -397,7 +443,7 @@ const handleResponse = function (response) {
   return response.json();
 };
 
-const array = ["painting", "Places", "Tempera", "Egyptian Art", "Islamic Art"];
+const array = ["Painting", "Sculptures", "Type of Art"];
 
 // document on load
 const onReady = function () {
